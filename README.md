@@ -1,0 +1,1 @@
+Welcome to the Cybertitan EDU website for the Cybertitan training program. This website is to gather information that has been found on the internet, or through experience to help others learning for the Cybertitan competition. :)
