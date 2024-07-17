@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<title>HYPERNOVA (P.CT)</title>
+<link rel="stylesheet" href="Hypernova.css">
+
+<body>
+	<h1 id="headerL">Hypernova</h1><h3 id="headerL">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">MAIN</a></h3>
+	<br id="brlarge">
+	<p>This page is about the way we are going to 
+	setup and stratagize how to gain the maximum amount
+	of points that every team will achieve.</p>
+
+	<p id="DISCLAIMER">DISCLAIMER: THE CONTENTS ARE PULLED AND REFERENCED MULTIPLE TIMES
+	FROM AN BLOG POST BY HYPERNOVA. SEE LINK BELOW</p>
+	
+	<p>Table of contents</p>
+
+	<a href="#Preface">Section 0 (Preface)</a><br />
+	<a href="#AtC">Section 1 (Approaching the Competition)</a><br />
+	<a href="#RtC">Section 2 (Respecting the Challenge)</a><br />
+	<a href="#BM">Section 3 (Baselining and Meld)</a><br />
+	<a href="#Automation">Section 4 (Automation)</a><br />
+	<a href="#TG">Section 5 (Testing and Gameplans)</a><br />
+	<a href="#team-composition">Section 6 (Team Composition)</a><br />
+	<a href="#TeamC">Section 7 (Team Cohension) </a><br />
+	<a href="#0-H"> Section 8 (Hypernova Zero-to-Hero)</a><br />
+
+
+
+
+	<p>If you want to check the pure blog itself go to <a href="https://akshayrohatgi.com/blog/posts/How-To-Win-CyberPatriot/">this website.</a>
+		
+	<p>I will be breaking this down to be more applicable to our teams.</p>
+
+	<h2 id="Preface">Section 0 - Preface</h2>
+	<p>First off, addressing the misconceptions of Cyberpatriot and the competition
+	themselves. Many competitiors describe Cyberpatriot as a Windows and Linux
+	system-hardening competition. Which is semi-correct. How Hypernova describes Cyberpatriot
+	is a high school incident response and remediation competition.</p>
+	<p>Secondly, the other misconception of the competition is the 
+	need to catch all of the vulnerabilities. Which this problem is
+	described as simply created scripts and checklists and throwing 
+	it at the image, hoping for some points to be knocked out of it,
+	saying that these vulnerabilities are stored in a CyberPatriot 
+	Vulnerability Bank that we make in our own minds and checklists.
+	Hypernova states that it's not completely wrong to do this but
+	it is not the most effective way to approach a competition.</p>
+
+	<h2 id="AtC">Section 1 - Approaching the Competition</h2>
+	<p>Hypernova stated that they are not releasing their notes
+	with the checklists and practices that they used. This makes 
+	complete sense but they do give some tips to develop our
+	own checklist and practices.</p>
+	
+	<h4>Method 1 - Research</h4>
+	<p>Research is crucial to a Cybertitan team. Hypernova even
+	specifies that research is important before, during and after 
+	the competition. The way you research is also specified, this being
+	that you SHOULD NOT just google settings for a service than 
+	pasting those random settings. This practice should be used 
+	but we have never really used it. What's recommended to do is to 
+	search up these settings but also apply the settings, by
+	setting up an environnment and then fooling around with the 
+	setting and configurations that you should have found.</p>
+
+	<p>Researching effectively is extremely important. Hypernova
+	says during competition you will encounter something that 
+	will be messed with or thrown at you that won't work. They
+	suggest you develop skills to be able to search effectively
+	for any critical service.</p>
+
+	<p>Keeping note of what you struggled with and then finding
+	out how to solve the issue you couldn't figure out in 
+	competition. Hypernova helpfully provided a list of critical
+	services that we should look into and know how to configure.</p>
+	
+	<p>These services include:</p>
+	<ol>
+		<li>HTTP/S Services</li>
+		<ul>
+			<li>Apache2</li>
+			<li>IIS</li>
+		</ul>
+		<li>DNS Services</li>
+		<ul>
+			<li>Windows DNS</li>
+			<li>Bind9</li>
+		</ul>
+		<li>Remote Management Services</li>
+		<ul>
+			<li>OpenSSH</li>
+			<li>RDP</li>
+		</ul>
+		<li>Database Technology</li>
+		<ul>
+			<li>MySQL/MariaDB</li>
+			<li>MSSQL</li>
+		</ul>
+		<li>Mail Services</li>
+		<ul>
+			<li>Exchange</li>
+			<li>MailEnable</li>
+			<li>Postfix</li>
+			<li>Sendmail</li>
+		</ul>
+		<li>File Sharing Services</li>
+		<ul>
+			<li>FTP (vsFTPd, Filezilla)</li>
+			<li>SMB (Samba, Windows SMB)</li>
+		</ul>
+		<li>CMS Services</li>
+		<ul>
+			<li>WordPress</li>
+			<li>Joomla</li>
+		</ul>
+		<li>VPN Services</li>
+		<ul>
+			<li>OpenVPN</li>
+		</ul>
+		<li>Identity Management Services</li>
+		<ul>
+			<li>Active Directory Domain Services</li>
+		</ul>
+	</ol>
+
+	<h4>Method 2 - Operating System Familiarity</h4>
+	<p>There are three main operating system that CyberPatriot uses
+	in their competitions. We know them as Windows, Windows Server,	
+	and Ubuntu. We do so now, but Hypernova encourages a fundamental
+	understanding of the operating that you may be working on. This 
+	would include able to modify the Registery in Windows and poisoning
+	a package to keep reinstalling itself to lock apt from doing 
+	anything. Immersing yourself with the operating system spans
+	many different aspects. A common way is to use the operating
+	system on a computer that you often use. Also using community
+	built practice images will be extremely beneficial.</p>
+
+	<p>Gathering a good source of infomation on your operating
+	system. This would not only be the settings of your operating
+	system but to fully control your operating system.</p>
+
+	<p>Fortunately Hypernova has provided a list of things that 
+	we should look into if you want a better understanding of 
+	the operating systems that we compete with.</p>
+
+	<ul>
+		<li>Linux:</li>
+		<ul>
+			<li>User and Password Management: /etc/passwd, /etc/group, /etc/shadow</li>
+			<li>Pluggable Authentication Modules (PAM)</li>
+			<li>Tunable Kernel Parameters (Sysctl)</li>
+			<li>Package Managers (APT/DNF)</li>
+			<li>CRON</li>
+			<li>Permissions</li>
+			<li>Systemd</li>
+			<li>Sudo</li>
+			<li>Polkit</li>
+		</ul>
+
+		<li>Windows:</li>
+		<ul>
+			<li>Windows User Management</li>
+			<li>Local Security Policy</li>
+			<li>Group Policy</li>
+			<li>Registry Editor</li>
+			<li>Task Scheduler</li>
+			<li>Windows Defender</li>
+			<li>Permissions</li>
+			<li>Service Manager</li>
+		</ul>
+	</ul>
+	
+	<h2 id="RtC">Section 2 - Respecting the Challenge</h1>
+	<p>Hypernova highlights that many people tend to take shortcuts
+	when preparing and competiting. There is a sort of right way to 
+	do things, such as:</p>
+	
+	<ol>
+		<li>Creating proper configurations for servers and
+		ensuring the changes apply to the certain service you
+		are configuring.</li>
+		<li>Testing before, don't go into the competition
+		testing out things for the first time.</li>
+		<li>Dev testing your programs for errors.</li>
+	</ol>
+
+	<h2 id="BM">Section 3 - Baselining and Meld</h2>
+	<p>Baselining represents comparing clean or secured configurations
+	and environments to the ones in the challenge image. Hypernova gives 
+	an example when they went on a linux image, they would spend the 
+	first hour comparing permission values and changes that have appeared
+	in the system. Which is pretty genius since it can highlight a whole 
+	bunch of issues that potentially could be solved.</p>
+	
+	<p>The tool used to compare files and configurations is something
+	called <a href="http://meldmerge.org/">Meld</a> which Hypernova,
+	says that it is a visually based diffing and merging tool for 
+	files and directories that works in Linux and Windows.</p>
+
+	<p>It can be used in Windows but Hypernova outlines that
+	it is more difficult to set a base line. This could be because it's
+	more difficult to get a list of every single directory, or purely
+	because Linux and Windows work differently.</p>
+
+	<h2 id="Automation">Section 4 - Automation (Consistency vs. Speed)</h2>
+	<p>Script apparently are extremely imporant. Hypernova has made it
+	clear that scripts could be the piece that we are missing. Though they
+	give a tip for new competitors, and it's to build for consistency rather
+	than speed. The problems with the speed method is:</p>
+
+	<ul>
+		<li>Spending too much too optimizing. Lose the purpose of the
+		script. Build a quality script.</li>
+		<li>Only building the script, not having any other plan.</li>
+	</ul>
+	
+	<p>Hypernova recommeneds these methods on scripting:</p>
+	
+	<ul>
+		<li>Focus on the purpose of the script.</li>
+		<li>Keep up with developement.</li>
+		<li>Adapt your plan with the results and incorperate your script</li>
+
+	</ul>
+
+	<h2 id="TG">Section 5 - Testing and Gameplans</h2>
+	<p>It's important to keep testing gameplans, and scripts. Hypernova, states
+	that it is not rare to see a teams script breaking. Putting through a lot
+	of testing can decide between your script working and breaking on competition
+	day. Hypernova puts it simply, play smart.</p>
+
+	<p>A plan that Hypernova has for Linux is the following: (Also provided in this <a href="linuxgameplan.txt" download="linuxgameplan.txt">txt</a> document)
+	<ol>
+		<li>README</li>
+		<li>Forensic Questions</li>
+		<li>Initialize scripts and fix anything preventing script from running</li>
+		<li>Baselining</li>
+		<li>Users & Groups</li>
+		<li>Backdoor & Malware Hunting</li>
+		<li>Updates</li>
+		<li>Reboot to apply kernel updates</li>
+		<li>Package and service management</li>
+		<li>System hardening (PAM, Sysctl, Sudoers, Polkit, Bootloader, etc.)</li>
+		<li>Critical Service security</li>
+		<li>File and directory permissions</li>
+		<li>Point Scrounging</li>
+	</ol>
+
+	<h2 id="team-composition">Section 6 - Team Composition</h2>
+	<p>One of the best advice that Hypernova provides is the team setup
+	advice that he gives. Hypernova recalls certain moments when teams
+	crumbled under the pressure due to how their team is setup.</p>
+
+	<p>Hypernova then explains a six person team, which currently isn't possible.
+	Not just because for our Cybertitan team cannot fit six members but according
+	to the rules we can only have five members on a team competing at the same time.
+	They explain how it is beneficial to have a sixth member due to how many challenges
+	lie in the competition but unfortunately we cannot compete with six members.</p>
+
+	<p>Hypernova still has a great team composition template that we should take into account<p>
+
+	<ul>
+		<li>Windows Competitors (2 Members)</li>
+		<ul>
+			<li>First three rounds have two windows images, rather than one linux.</li>
+			<li>Windows can be more tricky, difficult to get automation.</li>
+			<li>Windows challenges tend to be more problematic.</li>
+		</ul>
+		<li>Linux Competitor (1 Member)</li>
+		<ul>
+			<li>Linux only has one image in the first three rounds.</li>
+			<li>Linux is more managable in than Windows. Much more automation potential.</li>
+		</ul>
+		<li>Linux/Extra Competitor (1 Member)</li>
+		<ul>
+			<li>The role of this competitor is to provide assistance to the primary linux
+			competitor.</li>
+			<li>Also, pursuing any extra points are or become available.</li>
+		</ul>
+		<li>Dedicated Cisco Competitor (1 Member)</li>
+		<ul>
+			<li>This competitor is going to be focused on Cisco Packet Tracer and gathering
+			all the points that come through that route.</li>
+		</ul>
+		<li>'Jack of All Trades' Competitor (NOT ALLLOWED DUE TO LIMIT OF 5 MEMEBERS 1 Member (Subsitute))</li>
+		<ul>
+			<li>Helps with everyother competitor to make the process smooth and simple.</li>
+		</ul>
+
+	</ul>
+
+	<h2 id="TeamC">Section 7 - Team Cohension</h2>
+	<p>Establishing good teamwork is all apart of making up a good team. Having
+	the strength and confidence in your teammates can make sure that communication
+	can stay open and is integral espcially for these competitions. Building a strong 
+	connection with your team members is quite valuable.</p>
+
+	<p>Hypernova also lays down a couple of helpful tips for teams in general: (Not Anything We Haven't Seen)</p>
+
+	<h4>Regular Team Meetings</h4>
+	<p>We already do regular meetings and by the next year (24-25) season coming around,
+	we are stepping things up to a whole new level. A firm schedule will be planned,
+	and we will have required meeting times and some optional. But it's to make
+	sure each one of us knows exactly what we need to do.</p>
+
+	<h4>Consistently doing Tasks</h4>
+	<p>This is certainly an area that we haven't been too invested in. But this can
+	help keep people's intrest. Projects spanning from each individual person to
+	create something to help the team. Hypernova gives the idea of a virtual
+	whiteboard to use, which sounds pretty neat.</p>
+
+	<h4>Sharing Resources</h4>
+	<p>This project now is my sharing which I plan on continuing and building for everyone.
+	Teams should develop stratagies and then share them because your teammate may just
+	have that answer you have been looking for.</p>
+
+	<h2 id="0-H">Section 8 - Hypernova's Zero to Hero Plan</h2>
+	<p>As a note this plan will change and adapt to what we do here at Cybertitan, but
+	notes will be taken and implemented to gain the best experience we can have.</p>
+
+	<p>Hypernova's Zero to Hero Plan consists of many different parts, but hightlights
+	all of the resources that we need to take all of our teams to the Nationals.</p>	
+
+	<ol>
+		<li>Laying the Groundwork</li>
+		<ol>
+			<li>Starting as early as possible. A quick way to get ahead of 
+				everyone else.</li>
+			<li>Build a well-balanced team. This should be a team that
+			works well with each other.</li>
+			<li>Setup a proper schedule and standards for the team.</li>
+			<li>Keep communication lines open. Make sure everyone knows what
+			is happening at all times</li>
+		</ol>
+		<li>Experience the Challenge</li>
+		<ol>
+			<li>The AFA release different practice images through the year,
+			but for the most part they aren't going to provide an advaned
+			look at what to prepare for. Hypernova has provided some community
+			built practice images.</li>
+			<ul>
+				<li><a href="https://www.mobmaker.xyz/cypat-images">DEBIAN 10 PRACTICE IMAGE (Bloons TD Themed)</a></li>
+				<li><a href="https://magistrate.shiversoft.net">SERVER 2019 + DEBIAN 8 PRACTICE IMAGES</a></li>	
+			</ul>
+		</ol>
+		<li>Join the Community</li>
+		<ol>
+			<li>There is a discord that you can go to and join. I have found 
+			there isn't too much to offer but a nice place to be if needed.</li>
+			<li><a href="https://discord.gg/cyberpatriot">Discord</a></li>
+		</ol>
+		<li>Develop OS Knowledge and Research</li>
+		<ol>
+			<li>Learning about your operating system is crucial. Some resources are
+			provided to help our teams.</li>
+			<li><a href="https://www.youtube.com/playlist?list=PLcn9NsWbb8s4wQrX0Qi5G4kRifQHxCV9-">Linux, Visually</a></li>
+			<li><a href="https://tryhackme.com/">TryHackMe (Has a good free service)</a></li>
+			<li><a href="https://tryhackme.com/r/room/winadbasics">Active Directory Room for TryHackMe</a></li>
+			<li><a href="https://tirefire.org/posts/fedora-practice/">FEDORA 37 PRACTICE IMAGE</a></li>
+			<li><a href="https://overthewire.org/wargames/bandit/bandit0.html">Linux Terminal Practice</a></li>
+			<li><a href="https://underthewire.tech/century">Other Linux Terminal Practice</a></li>
+			<li>Always gathering more resources and doing research, as well as 
+			possibly using the operating system itself.</li>
+		</ol>
+		<li>Rsearching security</li>
+		<ol>
+			<li>Knowledge is a very powerful tool, knowing about security
+			especially going into a cybersecurity competition. There are 
+			some rebust OS hardening scripts, not created but provided by
+			Hypernova.</li>
+			<li>Operating System Security Standards</li>
+			<ul>
+				<li><a href="https://www.stigviewer.com/stigs">STIGS</a></li>
+				<li><a href="https://www.stigviewer.com/stig/canonical_ubuntu_20.04_lts/">STIGS (Ubuntu)</a></li>
+				<li><a href="https://www.stigviewer.com/stig/microsoft_windows_server_2019/">STIGS (Server 2019)</a></li>
+				<li><a href="https://www.cisecurity.org/cis-benchmarks">Up-to-Date CIS benchmarks</a></li>
+				
+			</ul>
+			<li>Github Hardening/Vulnerability Scanning Scripts</li>
+			<ul>
+				<li><a href="https://github.com/konstruktoid/hardening">Hardening Ubuntu, Systemd edition</a></li>
+				<li><a href="https://github.com/0x6d69636b/windows_hardening">Hardening Windows, and HardeningKitty</a></li>
+				<li><a href="https://github.com/carlospolop/PEASS-ng">PEASS (Privilage Escalation Awesome Scripts SUITE)</a></li>
+			</ul>
+		</ol>
+		<li>Develop a Plan</li>
+		<ol>
+			<li>Always being prepared with a plan for each competition is crucial.
+			Setting up the right plan is important too. Putting good information
+			rather than info just for the info.</li>
+		</ol>
+		<li>Practice and More Practice</li>
+		<ol>
+			<li>Hypernova suggst practicing frequently to make sure that any 
+			scripts work, and to make sure to iron out any wrinkles. Hypernova
+			ranks these images as 'medium' difficulty.</li>
+			<ul>
+				<li><a href="https://drive.google.com/file/d/1ZLKf-DAij1VN6aFz6T5Z3fpGEpfxJWzo/view?usp=sharing">UBUNTU 18 PRACTICE IMAGE</a></li>
+				<li><a href="https://eth007.me/blog/cypat/">UBUNTU 22.04 PRACTICE IMAGE ("rooReaper Strikes Back" Server)</a></li>
+				<li><a href="https://drive.google.com/file/d/1FzzYG7haDwrz4D69MtKGDifDpqNWcg5q/view?usp=sharing">WINDOWS 10 PRACTICE IMAGE</a></li>
+				<li><a href="https://drive.google.com/file/d/1ai3vff_pS_rABc8hsnE_0uv08MOZiB1W/view?usp=sharing">WINDOWS 10 PRACTICE IMAGE ("The Cincinnati Zoo")</a></li>
+				<li><a href="https://magistrate.shiversoft.net/">WINDOWS SERVER PRACTICE IMAGE (Santa's Workshop Laptop)</a></li>
+			</ul>
+			<li>A note that I read was Hypernova strongly suggests doing all of this 
+			before Round 1.</li>
+		</ol>
+		<li>Compete (Sounds simple??)</li>
+		<ol>
+			<li>The goal to compete is set pretty high, trying to get into
+			the Nationals. From Hypernova's experience they state you can
+			miss only a few (being 2 vulnerabilities per round across all
+			images). Which is quite a standard but they also state that
+			after the Rounds 1 & 2 being in the Top 30 to 40 is a good
+			place to be for qualifying for Nationals.</li>
+		</ol>
+		<li>Improve and Continue Preparation</li>
+		<ol>
+			<li>The first competition is quite simple, and this is 
+			exactly what is setup but gives the teams a chance to 
+			regroup and discuss. Hypernova suggests spending time with the
+			team and ironing everything else that happened through Round 1.</li>
+		</ol>
+		<li>Compete (Round 2 this time...)</li>
+		<ol>
+			<li>Round 2 is known to be amped up, humbling
+                    anyone who thought that they were going to
+                    do well. Hypernova sets a standard of only
+                    missing 4-5 vulnerabilities across all images.
+                    To score high on Cisco, and reach the top
+                    25 teams. </li>
+			<li>It's about information gathering you need 
+                    to gather as much information as possible.
+                    The other teams with more experience know what
+                    they need to do, we need to make up for 
+                    experience with research and dedication.</li>
+		</ol>
+		<li>Repeating Step 9</li>
+		<ol>
+			<li>Hypernova advises that complex services and 
+                    scenarios are increasing and finding those 
+                    important points are compicated and is to
+                    be expected.</li>
+			<li>Preparing for the spike in difficulty. This
+                    is preparation for the difficult level which is 
+                    said to challenge anyone's gameplan and checklist.
+                    Hypernova says the time between these competitions,
+                    is where teams begin to break since coming off two
+                    rapid competitions to a month and half break.</li>
+			<ol>
+				<li>Advice given by Hypernova during this time.
+                        Planning, teamwork and attention to detail is crucial
+                        for this stage since you can do review and correct errors
+                        from previous rounds. Research is again needed once more to
+                        gain back an edge to what may come up. Scripts should be 
+                        modified for the next round.</li>
+			</ol>
+			<li>Practicing with practice images is also a method to
+                    increase your preparation. These images are more designed
+                    for the State Round (Round 3).</li>
+			<ol>
+                    		<li><a href="https://magistrate.shiversoft.net/">WINDOWS 10 PRACTICE IMAGE (Among The Reindeer)</a></li>
+                    		<li><a href="https://eth007.me/cypat/syshardening9/">SERVER 2022 PRACTICE IMAGE (friends of the fellowship)</a></li>
+                    		<li><a href="https://eth007.me/blog/">UBUNTU PRACTICE IMAGE (Narnia Minecraft Server)</a></li>
+                    		<li>Suggested for getting used to how the State round will be like: <a href="https://drive.google.com/file/d/1Og8lIMVqGKKenFXTpWYhA8X-szXyRtcY/view?usp=share_link">WINDOWS 10 IMAGE (My Little Pony)</a></li>
+                	</ol>
+		</ol>
+       			 <li>Compete (Round 3 this time!)</li>
+        		<ol>
+            			<li>Hypernova has another standard for the State Round.
+                We should only be missing 8 vulnerabilities at max
+                to set yourself up to get into the top 12-15 teams in 
+                the round.
+            			</li>
+        		</ol>
+       			<li>Prepare Once Again</li>
+       	 		<ol>
+           		 	<li>This is again more preparation, to keep onto those top
+                teams. Nationals should be on their way so we are going
+                preparing much more. Everything is basically at stake. 
+                If you miss a vulnerability that may be the one thing 
+                keeping you away from the Nationals.
+            			</li>
+            			<li>Hypernova also gives even more practice images:
+            			</li>
+            			<ol>
+                			<li><a href="https://x1nni.xyz/ppth.html">WINDOWS 11 PRACTICE IMAGE (Princeotn-Plainsboro Teaching Hospital)</a></li>
+                			<li><a href="https://drive.google.com/file/d/13OBAXsv408TQJ-WtNMc-mUEe2IBvI-UV/view?usp=share_link">WINDOWS SERVER 2019 PRACTICE IMAGE (King Arthur's Castle)</a></li>
+                			<li><a href="https://magistrate.shiversoft.net/">WINDOWS SERVER 2019 PRACTICE IMAGE (Mushroom Kingdom Server)</a></li>
+                			<li><a href="https://eth007.me/cypat/syshardening8/">FEDORA PRACTICE IMAGE (friends of the fellowship Linux Server)</a></li>
+                			<li><a href="https://magistrate.shiversoft.net/">DEBIAN 8 PRACTICE IMAGE (Space Force Server)</a></li>
+                			<li><a href="https://drive.google.com/file/d/1EW3hsjZMM--UtoFJuYBVbAMhUwU4Z8gn/view?usp=sharing">UBUNTU 22.04 PRACTICE IMAGE (Nevermore (login--> waddams:password))</a></li>
+            			</ol>
+        		</ol>
+        		<li>Compete, qualify for the Nationals</li>
+</body>
+</html>	 
+
+</body>
+</html>
