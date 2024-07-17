@@ -1,5 +1,31 @@
+:root {
+	--primary-color: #302AE6;
+	--secondary-color: #536390;
+	--font-color: #424242;
+	--bg-color: #FBE9D0;
+	--heading-color: #292922;
+}
+
+body {
+	font-family: sans-serif;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	max-width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
 h1 {
+	color: var(--heading-color);
+	font-size: 2rem;
+}
 
-	color: green;
+#headerL {
+	float: left;
 
+}
+
+#brlarge {
+	display: block;
+	margin-bottom: 6em;
 }
