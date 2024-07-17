@@ -30,3 +30,13 @@ h1 {
 	display: block;
 	margin-bottom: 6em;
 }
+
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #FBE9D0;
+	color: var(--font-color);
+	text-align: center;
+}
