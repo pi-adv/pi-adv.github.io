@@ -1,5 +1,46 @@
-h1 {
+:root {
+	--primary-color: #302AE6;
+	--secondary-color: #536390;
+	--font-color: #424242;
+	--bg-color: #FBE9D0;
+	--heading-color: #292922;
+}
 
-	color: red;
+body {
+	font-family: sans-serif;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	max-width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+h1 {
+	color: var(--heading-color);
+	font-size: 2rem;
+}
+
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #FBE9D0;
+	color: var(--font-color);
+	text-align: center;
+}
+
+#headerL {
+	float: left;
+}
+
+#headerR {
+	float: right;
+
+}
+
+#brlarge {
+	display: block;
+	margin-bottom: 6em;
 
 }

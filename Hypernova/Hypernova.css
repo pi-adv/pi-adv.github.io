@@ -1,6 +1,18 @@
-body {
-	background-color: BlanchedAlmond;
+:root {
+	--primary-color: #302AE6;
+	--secondary-color: #536390;
+	--font-color: #424242;
+	--bg-color: #FBE9D0;
+	--heading-color: #292922;
+}
 
+body {
+	font-family: sans-serif;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+	max-width: 90%;
+	margin: 0 auto;
+	font-size: 18px;
 }
 
 ul {
@@ -10,8 +22,8 @@ ul {
 }
 
 h1 {
-	text-align: center;
-
+	color: var(--heading-color);
+	font-size: 2rem;
 }
 
 h2 {
@@ -38,4 +50,18 @@ h2 {
 	display: block;
 	margin-bottom: 6em;
 
+}
+
+li {
+	margin: 10px 0;
+  }
+
+ #footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #FBE9D0;
+	color: var(--font-color);
+	text-align: center;
 }
