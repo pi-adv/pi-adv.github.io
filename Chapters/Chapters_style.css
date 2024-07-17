@@ -44,3 +44,12 @@ h1 {
 	margin-bottom: 6em;
 
 }
+
+code {
+	color: black;
+	background-color: #f1f1f1;
+}
+
+li {
+	margin: 10px 0;
+}

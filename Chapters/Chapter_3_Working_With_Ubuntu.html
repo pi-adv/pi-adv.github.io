@@ -2,6 +2,7 @@
 <html>
 <title>Ubuntu Basics (C.EDU)</title>
 <link rel="stylesheet" href="Chapters_style.css">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <body>
 	<h1>Ubuntu Basics</h1>
@@ -52,6 +53,63 @@
 		browser that you will run to load the Cyberpatriot websites will rely on the desktop interface. You 
 		will need to juggle them both and make sure you are able to navigate through both of these.
 	</p>
-	<h4>ETC.........</h4>
+	<p>You will find the desktop won't have very many icons. Only the icons for some internet shortcuts, which are 
+		for Cyberpatriot and the forensic questions and that should be about it (depending on the image you may have
+		more files). Clicking the Windows key on your keyboard will open up a view where you are looking at multiple
+		desktops. Clicking the Windows key twice quickly, it will open up the 'app central' where you are going to 
+		find all of the applications that have a GUI that you can launch. You can also click the waffle icon, or 
+		the Ubuntu icon on the dock, it will do the same thing.
+	</p>
+	<p>With the main point of the interface being mostly used for browsers, there is a couple that you should be aware 
+		of. Ever since a year ago, Ubuntu/Linux distros now have support for Google Chrome not just Chromium, and of 
+		course have firefox. These will need to be updated, but unless specified otherwise, install/use the broweser
+		that you want.
+	</p>
+	<h2>Basic Security - Ubuntu</h2>
+	<p>Knowing about how Ubuntu works and a bit of what you need to know to navigate the operating system, next is to
+		know what to do with the operating system to score and secure the machine. This is about the same process 
+		for the Windows machines but specific intructions for Ubuntu. Certain things like the updates, installing/removing apps, 
+		security policy, and firewall will be different to enable/install.
+	</p>
+	<h4>Updates</h4>
+	<p>This is a pretty good example of the changes that you are going to find comparing to Windows. To update the 
+		system there is two different ways to do so. First is through the terminal which is EXTREMELY RECOMMENED.
+		Second is through a GUI tool from Ubuntu which can break the system if the image specified that you 
+		shouldn't use the GUI.
+	</p>
+	<p>Using the terminal:</p>
+	<ul>
+		<li>Step ONE is to launch a terminal session.</li>
+		<li>Step TWO is to use the command <code>sudo apt update</code></li>
+		<li>Step THREE is to enter the users password to authorize the command.</li>
+		<li>All that command does, is to run APT and check its sources to see if there is an update for any of 
+			the software on your computer has an update to installed. Which if so, should appear as,</li>
+		<li><code>*** packages are available to be updated</code>.</li>
+		<li>Step FOUR is to complete the update which is to run this command, <code>sudo apt upgrade</code></li>
+		<li>This could take a lot or minimal time, depending on how many packages that can be updated.
+			Make sure to be patient and don't power off the machine while doing updates.
+		</li>
+	</ul>
+	<p>Using the GUI:</p>
+	<ul>
+		<li>Step ONE is find the updater in the 'app central' on Ubuntu.</li>
+		<li>Step TWO is to wait for the app to launch and it will automatically check for updates.</li>
+		<li>Step THREE is to click on to update when you are prompted. </li>
+		<li>You will have to enter the users password.</li>
+		<li>All you will need is to wait for the program to complete the update.</li>
+		<li>That's all it's pretty easy using the GUI but it can break quite easily.</li>
+	</ul>
+	<p>Make sure that you update via the terminal if you even have a little suspcision if the GUI won't work
+		or might brick the system.
+	</p>
+	<h4>Installing/Removing Apps (ex. gufw)</h4>
+	<p>Installing apps can be done two different ways. (technically three) First is the RECOMMENED way is to use 
+		the terminal is install every package that you need. Second is to use the Software Center, which isn't 
+		recommened since 99.9% of the time it's disabled on the competition images. Third is to download a .deb
+		file and use the terminal to install the package. (kind of a combination between the two). For this example
+		I'm going to install the GUFW (Graphical Uncomplicated Firewall).
+	</p>
+
+
 </body>
 </html>
