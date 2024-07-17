@@ -1,0 +1,17 @@
+#Linux Gameplan provided by Hypernova
+
+1. README
+2. Forensic Questions
+3. Initialize scripts and fix issues that won't let scripts run
+4. Baselining
+5. User & Groups
+6. Backdoor & Malware Hunting
+7. Updates
+8. Package and service management
+9. Reboot to apply kernel updates
+10. System Hardening (PAM, Sysctl, Sudoers, Polkit, Bootloader, etc.)
+11. Critical Service security
+12. File and directory permissions
+13. Point Scrounging
+
+Remember, play smart, not all will apply depending on the image.

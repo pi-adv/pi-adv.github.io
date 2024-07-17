@@ -1,0 +1,16 @@
+body {
+	background-color: BlanchedAlmond;
+
+}
+
+
+#headerL {
+	float: left;
+
+}
+
+#brlarge {
+	display: block;
+	margin-bottom: 6em;
+
+}

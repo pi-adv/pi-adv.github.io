@@ -1,0 +1,41 @@
+body {
+	background-color: BlanchedAlmond;
+
+}
+
+ul {
+
+	font-weight: bold;
+
+}
+
+h1 {
+	text-align: center;
+
+}
+
+h2 {
+	text-indent: 50px;
+	text-decoration: underline;
+
+}
+
+#DISCLAIMER {
+	font-weight: bold;
+
+}
+
+#headerL {
+	float: left;
+}
+
+#headerR {
+	float: right;
+
+}
+
+#brlarge {
+	display: block;
+	margin-bottom: 6em;
+
+}

@@ -1,0 +1,24 @@
+h1 {
+    text-align: center;
+    color: blue;
+
+}
+
+body {
+    background-color: BlanchedAlmond;
+}
+
+hr {
+    color: blue;
+}
+
+#headerL {
+	float: left;
+
+}
+
+#brlarge {
+	display: block;
+	margin-bottom: 6em;
+
+}
