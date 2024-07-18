@@ -5,7 +5,20 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <body>
-	<h1>Ubuntu Basics</h1>
+	<h1 id="headerL">Chapter 3 - Working with Ubuntu</h1><h3 id="headerR"><a href="Chapters.html">Chapters</a></h3>
+	<br id="brlarge">
+    <p id="titlep">This section will be a simple link to different sections.</p>
+	<ul>	
+		<li><a href="#T">SECTION 3.0 - Terminal</a></li>
+			<li><a href="#UI">SECTION 3.1  - User Interface</a></li>
+			<li><a href="#BS-U">SECTION 3.2 - Basic Security - Ubuntu</a></li>
+			<li><a href="#U">SECTION 3.3 - Updates</a></li>
+			<li><a href="#I/R">SECTION 3.4 - Installing/Removing Apps</a></li>
+			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
+			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
+			<li><a href="#MU">SECTION 3.3 - More Ubuntu</a></li>
+		</ul>
+		<hr>
 	<p>Ubuntu can be quite scary to many people since of how much freedom that you can have
 		and how much customizability that you have. Which is understandable but it's much
 		easier than you think. Once you pick up a few key terminal commands, you can do
@@ -16,7 +29,7 @@
 		These other distructions revolve around the same concept, which is great rather than
 		learning distrobutions again, and again.
 	</p>
-	<h4>Terminal</h4>
+	<h4 id="T">Terminal</h4>
 	<p>Like I said before the one item in Ubuntu that you are going to be interacting with is
 		the terminal. The terminal has a specific set of commands that you can use. For example
 		to change a directory (moving into a different folder on the computer), you use the cd
@@ -45,7 +58,7 @@
 		You can do anything in the terminal, and there are certain commands to do certain things. There
 		is a hierarchy that permits certain users to do their certain things.
 	</p>
-	<h4>User Interface</h4>
+	<h4 id="UI">User Interface</h4>
 	<p>Although Ubuntu can be run mainly from the terminal, there is a desktop interface that you can use
 		to navigate the entire system. Mostly you can rely on the UI for setting up Users, changing the internet,
 		and navigating the file system with visable icons. For some cases the desktop interface makes things
@@ -65,13 +78,13 @@
 		course have firefox. These will need to be updated, but unless specified otherwise, install/use the broweser
 		that you want.
 	</p>
-	<h2>Basic Security - Ubuntu</h2>
+	<h2 id="BS-U">Basic Security - Ubuntu</h2>
 	<p>Knowing about how Ubuntu works and a bit of what you need to know to navigate the operating system, next is to
 		know what to do with the operating system to score and secure the machine. This is about the same process
 		for the Windows machines but specific intructions for Ubuntu. Certain things like the updates, installing/removing apps,
 		security policy, and firewall will be different to enable/install.
 	</p>
-	<h4>Updates</h4>
+	<h4 id="U">Updates</h4>
 	<p>This is a pretty good example of the changes that you are going to find comparing to Windows. To update the
 		system there is two different ways to do so. First is through the terminal which is EXTREMELY RECOMMENED.
 		Second is through a GUI tool from Ubuntu which can break the system if the image specified that you
@@ -102,7 +115,7 @@
 	<p>Make sure that you update via the terminal if you even have a little suspcision if the GUI won't work
 		or might brick the system.
 	</p>
-	<h4>Installing/Removing Apps (ex. gufw)</h4>
+	<h4 id="I/R">Installing/Removing Apps (ex. gufw)</h4>
 	<p>Installing apps can be done two different ways. (technically three) First is the RECOMMENED way is to use
 		the terminal is install every package that you need. Second is to use the Software Center, which isn't
 		recommened since 99.9% of the time it's disabled on the competition images. Third is to download a .deb
@@ -132,7 +145,7 @@
 			by other applications, the terminal will ask you to run <code>sudo apt autoremove</code> to get rid of the
 			other packages.</li>
 	</ul>
-	<h4>Firewall Setup</h4>
+	<h4 id="FS">Firewall Setup</h4>
 	<p>Surprisingly, the firewall is quite easy to setup on Ubuntu. The main portion is just installing the package.
 		By using the gufw application it makes it extremely easy to configure the status of the firewall, changing the
 		output/input from the computer, and to add and change rules all in the GUI.</p>
@@ -145,7 +158,7 @@
 			application.</li>
 		<li>Bare in mind that all of this can be configured through the terminal since gufw is just the ufw but with a GUI.</li>
 	</ul>
-	<h4>Security Policy</h4>
+	<h4 id="SP">Security Policy</h4>
 	<p>The security policy on Ubuntu is done differently than what you would find on Windows. First off, is the fact that you
 		can only use the terminal since there is no GUI for it. Second is that it's a bit complicated so make sure you have
 		everything noted down. The point of the security policy is to keep the good people in and the bad people out. The issue
@@ -155,5 +168,10 @@
 		the same thing as the Local Security Policy on Windows. To edit PAM you need to go a specifc directory where PAM is located
 		and use a text editor such as gedit or nano and edit the file to configure it.</p>
 	<p>Since PAM is much more than just a simple paragraph here I'm going to create a seperate page here <a href="PAM.html">PAM.</a></p>
+	<h4 id="MU">More Ubuntu</h4>
+	<p>Competiting with Ubuntu only gets easier if you know exactly how to use the interface. If you want to know more about Ubuntu,
+		use Ubuntu. If you install Ubuntu on a laptop or a device of yours, it will help you get used to the interface and skip most 
+		of the simple commands and skip to the more advanced part of Ubuntu.
+	</p>
 </body>
 </html>
