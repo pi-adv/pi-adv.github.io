@@ -65,3 +65,8 @@ li {
 	color: var(--font-color);
 	text-align: center;
 }
+
+#titlep {
+	display: block;
+	margin-top: 4em;
+}

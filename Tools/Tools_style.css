@@ -44,3 +44,13 @@ h1 {
 hr {
     color: #362e01;
 }
+
+#titlep {
+	display: block;
+	margin-top: 4em;
+}
+
+#headerR {
+	float: right;
+
+}
