@@ -9,14 +9,12 @@
 	<br id="brlarge">
     <p id="titlep">This section will be a simple link to different sections.</p>
 	<ul>	
-		<li><a href="#T">SECTION 3.0 - Terminal</a></li>
-			<li><a href="#UI">SECTION 3.1  - User Interface</a></li>
-			<li><a href="#BS-U">SECTION 3.2 - Basic Security - Ubuntu</a></li>
-			<li><a href="#U">SECTION 3.3 - Updates</a></li>
-			<li><a href="#I/R">SECTION 3.4 - Installing/Removing Apps</a></li>
-			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
-			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
-			<li><a href="#MU">SECTION 3.3 - More Ubuntu</a></li>
+		<li><a href="#BS">SECTION 4.0 - Basic Setup</a></li>
+			<li><a href="#RFQ">SECTION 4.1 - README, Forensic Questions</a></li>
+			<li><a href="#U">SECTION 4.2 - Users</a></li>
+			<li><a href="#F">SECTION 4.3 - Firewall</a></li>
+			<li><a href="#G">SECTION 4.4 - Groups</a></li>
+			<li><a href="#LSP">SECTION 4.5 - Local Security Policy</a></li>
 		</ul>
 		<hr>
 
@@ -31,7 +29,7 @@
 		better and Windows does certain things worse. It all depends on how you move around the system and learn how to work the machine that is 
 		Windows.
 	</p>
-	<h4>Basic Setup</h4>
+	<h4 id="BS">Basic Setup</h4>
 	<p>The concept of using the terminal as the main source of doing things in Ubuntu is the complete opposite concept that it for Windows. Mostly 
 		you will be fooling around a user interface that will have applications for everything that you need to do. There are times where you will 
 		have to pull out powershell or cmd, but for the majority, you are safe to use the UI.
@@ -45,7 +43,7 @@
 		<li>Local Security Policy</li>
 		<li>Basic File Explorer Info</li>
 	</ul>
-	<h4>README, Forensic Questions</h4>
+	<h4 id="RFQ">README, Forensic Questions</h4>
 	<p>The main part of first looking at a machine that you are competiting on, is to look at the README file and making notes of anything that 
 		you should and shouldn't do with the machine. Near the bottom is the large section of allowed users on the system which is going to be 
 		the main part of your notes. Making sure that you note users, services and any other specifc intruction unique to your system. These could 
@@ -62,7 +60,7 @@
 		extremely important to answer correctly since those points are leaps and bounds espically when it comes to later rounds. Make sure you are 
 		on top of everything that you can do on Windows. When competition comes we can only guess what they will through at us.
 	</p>
-	<h4>Users</h4>
+	<h4 id="U">Users</h4>
 	<p>Users are pretty much the same that you would do with Ubuntu. With the users, you will need to be able to add, remove and change the users 
 		on your machine. There is two different ways to do this. Through the control panel or Windows Settings. I like using the control panel so 
 		the steps that follow will reflect that.
@@ -75,7 +73,7 @@
 	</ol>
 	<p>This is where you should do all of your user changes. If you mix things up, you might not get everything and miss someone. Make sure before 
 		you finish with the users that you double check the README that you did not miss anything.</p>
-	<h4>Firewall</h4>
+	<h4 id="F">Firewall</h4>
 	<p>The firewall is extremely important to activate as well, having the same theme as everything you should do on this page as its good points to 
 		get started. The firewall can only be managed through the control panel and the rules where you can make outbound and inbound rules is in an
 		advanced firewall application that does not turn on the firewall only deals with the rules of the firewall. You don't need to configure anything 
@@ -94,12 +92,94 @@
 		set up rules, go back to the main firewall settings and click 'Advanced settings'. Settings up the firewall on Windows is a lot easier than Ubuntu 
 		the GUI is a little more user friendly.
 	</p>
-	<h4>Groups</h4>
+	<h4 id="G">Groups</h4>
 	<p>Groups are incredibly important to make sure that you know how to configure them. On the image it will presumably asking you something about the groups 
 		found on this machine. You will need to go to a certain app to get that information. Fortunately it is sort out quite nicely but it can get confusing.
 		In the app you can modify, add and remove groups as well as changing their permissions to what they are allowed to do on the computer.
 	</p>
-	<p>***INSERT PROCESS HERE. you need pro edtion of windows.</p>
-	<h4>ETC.....</h4>
+	<p>The groups can be found in the computer management software on the computer. Actually quite a few things can be found in the computer management software.
+		The Groups are found in the Local Users and Groups section on the menu on the right. You will have two options, one being Users and the other being
+		Groups. Click on groups and you will be in a menu full of different groups. These are all the groups available on the computer. Right clicking in the 
+		blank section of the screen, you will be able to do a whole bunch of stuff, like adding groups. These groups don't need to much configuration at the 
+		start. You need the name, and the members. That's all and then you can change what they do once the group is created.
+	</p>
+	<p>Truely Groups aren't that difficult to manage on Windows, as long as you name them correctly and make sure that your teammates know that you made the 
+		group already you should be all set with the Groups.
+	</p>
+	<h4 id="LSP">Local Security Policy</h4>
+	<p>The local security policy or LSP is exactly what you think it is, a policy for passowrds. Except it's not the only thing that the LSP can manage. There 
+		are many different things that the LSP can manage, passwords, auditing policies and even lockout policies. These all need to be configured properly 
+		since having an improper value can result in either no points, or a loss of points. The reason why, is that the LSP works the password policy as a 
+		certain value rather than seeing it being turned on or off. 
+	</p>
+	<ol>
+		<li>Password Policy</li>
+		<ul>
+			<li>First things first, you will need to open up the LSP on your computer. There is two ways to do this. First is to press WINDOWS + R to open the 
+				run command or you can search for local security policy.
+			</li>
+			<li>Once opened you will need to expand the 'Account Policies' section. Then click on 'Password Policy'.</li>
+			<li>You will see six different options to change, these are your settings that you can use to set a password policy.</li>
+			<li>Set the values to the following:</li>
+			<ul>
+				<li>Enforce password history == 5 passowrds remembered</li>
+				<li>Maximum passowrd age == 90 days or more</li>
+				<li>Minimum password age == 30 days or more</li>
+				<li>Minimum password length == 10 characters or more</li>
+				<li>Password must meet complexity requirements == Enabled</li>
+				<li>Store passwords using reversible encryption == Disabled</li>
+			</ul>
+		</ul>
+		<li>Account Lockout Policy</li>
+		<ul>
+			<li>Secondly, you will need to edit the account lockout policy, which deals with the times you try to log into the system incorrectly.</li>
+			<li>Go to Local Security Policy => Account Policies => Account Lockout Policy</li>
+			<ul>
+				<li>FIRST AND THIRD OPTIONS WONT UNLOCK UNTIL SECOND OPTION IS ACTIVE</li>
+				<li>Account lockout duration == 30 minutes</li>
+				<li>Account lockout threshold == 5 invalid logon attempts</li>
+				<li>Reset account lockout counter after == 30 minutes</li>
+			</ul>
+		</ul>
+		<li>Audit Policy</li>
+		<ul>
+			<li>Thirdly, you will need to setup an audit policy, keeping track of everything that is available on its list.</li>
+			<li>Go to Local Security Policy => Local Policies => Audit Policy</li>
+			<li>This is for Default settings</li>
+			<ul>
+				<li>Audit account logon events == Success</li>
+				<li>Audit account management == No Auditing</li>
+				<li>Audit directory service access == No Auditing</li>
+				<li>Audit logon events == Success</li>
+				<li>Audit object access == Success</li>
+				<li>Audit policy change == No Auditing</li>
+				<li>Audit privilege use == No Auditing</li>
+				<li>Audit process tracking == No Auditing</li>
+				<li>Audit system events == No Auditing</li>
+			</ul>
+		</ul>
+		<li>User Right Assignment</li>
+		<ul>
+			<li>Forth, you will need to setup the rights assignment which manages everything about the rights of all users and what they can do to the machine.</li>
+			<li>Go to Local Security Policy => Local Policies => User Rights Assignment</li>
+			<li>I will only be listing the ones that need to be changed.</li>
+			<ul>
+				<li>Line 18: Deny access to this computer from the network == Guest</li>
+				<li>Line 21: Deny log on locally == Guest</li>
+			</ul>
+		</ul>
+		<li>Security Options</li>
+		<ul>
+			<li>Fifth, you will need to setup the security options that will set different measures based on the value you set them.</li>
+			<li>Go to Local Security Policy => Local Policies => Security Options</li>
+			<li>I will only be listing the ones that need to be changed.</li>
+			<ul>
+				<li>Line 3: Accounts: Guest account status == Disabled</li>
+				<li>Line 28: Interactive logon: Do not require CTRL+ALT+DEL == Disabled</li>
+				<li>Line 50: Network Access: Do not allow anonymous enumeration of SAM Accounts == Enabled</li>
+			</ul>
+		</ul>
+	</ol>
+	<p>That's all that needs to be modified for now in the LSP.</p>
 </body>
 </html>
