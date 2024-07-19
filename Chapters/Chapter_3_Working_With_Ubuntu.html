@@ -5,31 +5,44 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <body>
-	<h1>Ubuntu Basics</h1>
+	<h1 id="headerL">Chapter 3 - Working with Ubuntu</h1><h3 id="headerR"><a href="Chapters.html">Chapters</a></h3>
+	<br id="brlarge">
+    <p id="titlep">This section will be a simple link to different sections.</p>
+	<ul>	
+		<li><a href="#T">SECTION 3.0 - Terminal</a></li>
+			<li><a href="#UI">SECTION 3.1  - User Interface</a></li>
+			<li><a href="#BS-U">SECTION 3.2 - Basic Security - Ubuntu</a></li>
+			<li><a href="#U">SECTION 3.3 - Updates</a></li>
+			<li><a href="#I/R">SECTION 3.4 - Installing/Removing Apps</a></li>
+			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
+			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
+			<li><a href="#MU">SECTION 3.3 - More Ubuntu</a></li>
+		</ul>
+		<hr>
 	<p>Ubuntu can be quite scary to many people since of how much freedom that you can have
 		and how much customizability that you have. Which is understandable but it's much
-		easier than you think. Once you pick up a few key terminal commands, you can do 
+		easier than you think. Once you pick up a few key terminal commands, you can do
 		pretty much as much you can do on Windows just on your keyboard.
 	</p>
-	<p>Ubuntu is a distroduction from the linux family of operating system flavours. There are 
-		many more including Debian and Fedora that you might come accross in competition. 
+	<p>Ubuntu is a distroduction from the linux family of operating system flavours. There are
+		many more including Debian and Fedora that you might come accross in competition.
 		These other distructions revolve around the same concept, which is great rather than
 		learning distrobutions again, and again.
 	</p>
-	<h4>Terminal</h4>
+	<h4 id="T">Terminal</h4>
 	<p>Like I said before the one item in Ubuntu that you are going to be interacting with is
 		the terminal. The terminal has a specific set of commands that you can use. For example
 		to change a directory (moving into a different folder on the computer), you use the cd
 		command which stands for C hange D irectory. A couple other common commands is using
-		the apt command. APT is a package manager which you can use to install, remove and update 
+		the apt command. APT is a package manager which you can use to install, remove and update
 		packages from.
 	</p>
 	<p>Their are plenty of other commands and once you install a package some will add even more
 		commands that you can use in the terminal. Another important note about using the terminal
-		is understanding the hierarchy of the system. 
+		is understanding the hierarchy of the system.
 	</p>
 	<ol>
-		<li>First is the root user. This user is supposed to be protected by a password and change 
+		<li>First is the root user. This user is supposed to be protected by a password and change
 			EVERYTHING about the computer. Nothing is off limits and should be well protected.
 		</li>
 		<li>Second is the administrator user. This user has the ability to call the sudo command before
@@ -37,44 +50,44 @@
 			user. However this has limitations.
 		</li>
 		<li>Last is the standard user. This user you will be not interacting with much, however they
-			do not have the same privilages as the admin user and can only use non-root commands in 
+			do not have the same privilages as the admin user and can only use non-root commands in
 			the terminal. (However there is a sudoers file but that will be mentioned later)
 		</li>
 	</ol>
 	<p>With this information, I'll recap. Working with Ubuntu, you will have to work with the terminal.
-		You can do anything in the terminal, and there are certain commands to do certain things. There 
+		You can do anything in the terminal, and there are certain commands to do certain things. There
 		is a hierarchy that permits certain users to do their certain things.
 	</p>
-	<h4>User Interface</h4>
+	<h4 id="UI">User Interface</h4>
 	<p>Although Ubuntu can be run mainly from the terminal, there is a desktop interface that you can use
 		to navigate the entire system. Mostly you can rely on the UI for setting up Users, changing the internet,
 		and navigating the file system with visable icons. For some cases the desktop interface makes things
-		a lot easier to do. However not everything can be done without running into the terminal. The 
-		browser that you will run to load the Cyberpatriot websites will rely on the desktop interface. You 
+		a lot easier to do. However not everything can be done without running into the terminal. The
+		browser that you will run to load the Cyberpatriot websites will rely on the desktop interface. You
 		will need to juggle them both and make sure you are able to navigate through both of these.
 	</p>
-	<p>You will find the desktop won't have very many icons. Only the icons for some internet shortcuts, which are 
+	<p>You will find the desktop won't have very many icons. Only the icons for some internet shortcuts, which are
 		for Cyberpatriot and the forensic questions and that should be about it (depending on the image you may have
 		more files). Clicking the Windows key on your keyboard will open up a view where you are looking at multiple
-		desktops. Clicking the Windows key twice quickly, it will open up the 'app central' where you are going to 
-		find all of the applications that have a GUI that you can launch. You can also click the waffle icon, or 
+		desktops. Clicking the Windows key twice quickly, it will open up the 'app central' where you are going to
+		find all of the applications that have a GUI that you can launch. You can also click the waffle icon, or
 		the Ubuntu icon on the dock, it will do the same thing.
 	</p>
-	<p>With the main point of the interface being mostly used for browsers, there is a couple that you should be aware 
-		of. Ever since a year ago, Ubuntu/Linux distros now have support for Google Chrome not just Chromium, and of 
+	<p>With the main point of the interface being mostly used for browsers, there is a couple that you should be aware
+		of. Ever since a year ago, Ubuntu/Linux distros now have support for Google Chrome not just Chromium, and of
 		course have firefox. These will need to be updated, but unless specified otherwise, install/use the broweser
 		that you want.
 	</p>
-	<h2>Basic Security - Ubuntu</h2>
+	<h2 id="BS-U">Basic Security - Ubuntu</h2>
 	<p>Knowing about how Ubuntu works and a bit of what you need to know to navigate the operating system, next is to
-		know what to do with the operating system to score and secure the machine. This is about the same process 
-		for the Windows machines but specific intructions for Ubuntu. Certain things like the updates, installing/removing apps, 
+		know what to do with the operating system to score and secure the machine. This is about the same process
+		for the Windows machines but specific intructions for Ubuntu. Certain things like the updates, installing/removing apps,
 		security policy, and firewall will be different to enable/install.
 	</p>
-	<h4>Updates</h4>
-	<p>This is a pretty good example of the changes that you are going to find comparing to Windows. To update the 
+	<h4 id="U">Updates</h4>
+	<p>This is a pretty good example of the changes that you are going to find comparing to Windows. To update the
 		system there is two different ways to do so. First is through the terminal which is EXTREMELY RECOMMENED.
-		Second is through a GUI tool from Ubuntu which can break the system if the image specified that you 
+		Second is through a GUI tool from Ubuntu which can break the system if the image specified that you
 		shouldn't use the GUI.
 	</p>
 	<p>Using the terminal:</p>
@@ -82,7 +95,7 @@
 		<li>Step ONE is to launch a terminal session.</li>
 		<li>Step TWO is to use the command <code>sudo apt update</code></li>
 		<li>Step THREE is to enter the users password to authorize the command.</li>
-		<li>All that command does, is to run APT and check its sources to see if there is an update for any of 
+		<li>All that command does, is to run APT and check its sources to see if there is an update for any of
 			the software on your computer has an update to installed. Which if so, should appear as,</li>
 		<li><code>*** packages are available to be updated</code>.</li>
 		<li>Step FOUR is to complete the update which is to run this command, <code>sudo apt upgrade</code></li>
@@ -102,14 +115,63 @@
 	<p>Make sure that you update via the terminal if you even have a little suspcision if the GUI won't work
 		or might brick the system.
 	</p>
-	<h4>Installing/Removing Apps (ex. gufw)</h4>
-	<p>Installing apps can be done two different ways. (technically three) First is the RECOMMENED way is to use 
-		the terminal is install every package that you need. Second is to use the Software Center, which isn't 
+	<h4 id="I/R">Installing/Removing Apps (ex. gufw)</h4>
+	<p>Installing apps can be done two different ways. (technically three) First is the RECOMMENED way is to use
+		the terminal is install every package that you need. Second is to use the Software Center, which isn't
 		recommened since 99.9% of the time it's disabled on the competition images. Third is to download a .deb
 		file and use the terminal to install the package. (kind of a combination between the two). For this example
 		I'm going to install the GUFW (Graphical Uncomplicated Firewall).
 	</p>
-
-
+	<ul>
+		<li>Step ONE is to open up the terminal.</li>
+		<li>Step TWO is to use the install command with APT, <code>sudo apt install gufw</code></li>
+		<li>The package that you want to install has to come after the install command. It also needs to be available
+			to install through APT or it won't find the application that you are trying to install.</li>
+		<li>Step THREE is to wait either for a question about using disk space, where you put a <code>y</code> and hit
+			enter, or it will install without you needing any user input.</li>
+		<li>Once it finishes you can now launch the application using either the icon on the desktop interface, or
+			launching the app in the terminal using it's package name. In this case entering <code>gufw</code> will
+			open up the firewall.</li>
+	</ul>
+	<p>Removing apps is quite easy too, but can only be done in the terminal, of course the RECOMMENED way, but
+		some apps can be removed in the Application Center. However not every application can be uninstalled on the
+		app center. As long as you know the package name of the application that you are trying to remove, then
+		use the terminal to get rid of it.</p>
+	<ul>
+		<li>Step ONE is to launch the terminal.</li>
+		<li>Step TWO is to use the remove command with APT, <code>sudo apt remove gufw</code><li>
+		<li>When you entered the command, it will be quick and easy and uninstall the package you specified. The
+			only thing is that some applications rely on certain other packages to run. If those are no longer required
+			by other applications, the terminal will ask you to run <code>sudo apt autoremove</code> to get rid of the
+			other packages.</li>
+	</ul>
+	<h4 id="FS">Firewall Setup</h4>
+	<p>Surprisingly, the firewall is quite easy to setup on Ubuntu. The main portion is just installing the package.
+		By using the gufw application it makes it extremely easy to configure the status of the firewall, changing the
+		output/input from the computer, and to add and change rules all in the GUI.</p>
+	<ul>
+		<li>Step ONE is the install the gufw package. <code>sudo apt install gufw</code></li>
+		<li>Step TWO is the laucnh the application. You can do this through the app icon or through the terminal. <code>sudo gufw</code>
+			<li>
+		<li>Step THREE is to configure the application. The default configuration is good to use so click on the switch to turn
+			on the firewall. You can change around the outgoing and incoming settings, and add rules on the rules section of the
+			application.</li>
+		<li>Bare in mind that all of this can be configured through the terminal since gufw is just the ufw but with a GUI.</li>
+	</ul>
+	<h4 id="SP">Security Policy</h4>
+	<p>The security policy on Ubuntu is done differently than what you would find on Windows. First off, is the fact that you
+		can only use the terminal since there is no GUI for it. Second is that it's a bit complicated so make sure you have
+		everything noted down. The point of the security policy is to keep the good people in and the bad people out. The issue
+		comes in competition. With my experience anytime when we tried to modify the security policy, it resulted in losing access
+		to the machine and being locked out. This is of course terrible because you need access to that account. </p>
+	<p>The application that it used on Ubuntu, is PAM which stands for Pluggable Authentication Modules. Which that is more or less
+		the same thing as the Local Security Policy on Windows. To edit PAM you need to go a specifc directory where PAM is located
+		and use a text editor such as gedit or nano and edit the file to configure it.</p>
+	<p>Since PAM is much more than just a simple paragraph here I'm going to create a seperate page here <a href="PAM.html">PAM.</a></p>
+	<h4 id="MU">More Ubuntu</h4>
+	<p>Competiting with Ubuntu only gets easier if you know exactly how to use the interface. If you want to know more about Ubuntu,
+		use Ubuntu. If you install Ubuntu on a laptop or a device of yours, it will help you get used to the interface and skip most 
+		of the simple commands and skip to the more advanced part of Ubuntu.
+	</p>
 </body>
 </html>

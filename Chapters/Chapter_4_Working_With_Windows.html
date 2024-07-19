@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<title>Basic Commands (P.CT)</title>
+<link rel="stylesheet" href="Chapters_style.css">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+<body>
+	<h1 id="headerL">Chapter 4 - Working with Windows</h1><h3 id="headerR"><a href="Chapters.html">Chapters</a></h3>
+	<br id="brlarge">
+    <p id="titlep">This section will be a simple link to different sections.</p>
+	<ul>	
+		<li><a href="#T">SECTION 3.0 - Terminal</a></li>
+			<li><a href="#UI">SECTION 3.1  - User Interface</a></li>
+			<li><a href="#BS-U">SECTION 3.2 - Basic Security - Ubuntu</a></li>
+			<li><a href="#U">SECTION 3.3 - Updates</a></li>
+			<li><a href="#I/R">SECTION 3.4 - Installing/Removing Apps</a></li>
+			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
+			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
+			<li><a href="#MU">SECTION 3.3 - More Ubuntu</a></li>
+		</ul>
+		<hr>
+
+	<p>Windows is the operating system that most people are going to start on. The fact that many peoples first experience with a computer
+		has been on Windows, it only makes sense to start out. I find though that since you have started out before the idea of Cybersecurity
+		you may have developed some bad habits using the operating system. For the most part these bad habits are pretty simple, keeping 
+		very simple passwords, keeping open 16 different applications open, nothing that cannot be worked out. 
+	</p>
+	<p>The main thing that you need to pay attention to when it comes to Windows machines, is that Windows has a nice outer shell. The UI is 
+		typically easy to use and installing anything on a Windows computer is quite simple. The hard part is when you have to lift that hood 
+		and see all of inner workings of Windows. I would argue that Windows can be as difficult as Ubuntu, since Ubuntu does certain things 
+		better and Windows does certain things worse. It all depends on how you move around the system and learn how to work the machine that is 
+		Windows.
+	</p>
+	<h4>Basic Setup</h4>
+	<p>The concept of using the terminal as the main source of doing things in Ubuntu is the complete opposite concept that it for Windows. Mostly 
+		you will be fooling around a user interface that will have applications for everything that you need to do. There are times where you will 
+		have to pull out powershell or cmd, but for the majority, you are safe to use the UI.
+	</p>
+	<p>So lets make a list of some basics things to do, logged on to a competition image:</p>
+	<ul>
+		<li>README, Forensic Questions</li>
+		<li>Users</li>
+		<li>Firewall</li>
+		<li>Groups</li>
+		<li>Local Security Policy</li>
+		<li>Basic File Explorer Info</li>
+	</ul>
+	<h4>README, Forensic Questions</h4>
+	<p>The main part of first looking at a machine that you are competiting on, is to look at the README file and making notes of anything that 
+		you should and shouldn't do with the machine. Near the bottom is the large section of allowed users on the system which is going to be 
+		the main part of your notes. Making sure that you note users, services and any other specifc intruction unique to your system. These could 
+		be important to a wide range of things, including the users, forensic questions or software that needs to stay on the machine. Fortunately
+		you don't need to take notes too seriously rereading and keeping the README on screen to use as a reference is the most recommended way to 
+		analyze the README.
+	</p>
+	<p>Forensic Questions are questions located on the desktop of your machine. On Windows you are typically going to have the most questions than 
+		Ubuntu and Server, but again depending on the competition. Opening the forensic questions in notepad will show an example of how to enter 
+		your answer to get the points linked with the Forensic Questions. The process is setup quite well. The hard part comes when you have to 
+		analyze and find the answer to the question. These could be a wide range of questions, which I find most common on Windows, is finding either 
+		a file on the disk, or a hash for a picture on the desktop. These of course can be solved by searching up certain things online but the 
+		importance of these questions cannot be stressed enough. Each question is worth around 8-10 points each (depending on the round). This is 
+		extremely important to answer correctly since those points are leaps and bounds espically when it comes to later rounds. Make sure you are 
+		on top of everything that you can do on Windows. When competition comes we can only guess what they will through at us.
+	</p>
+	<h4>Users</h4>
+	<p>Users are pretty much the same that you would do with Ubuntu. With the users, you will need to be able to add, remove and change the users 
+		on your machine. There is two different ways to do this. Through the control panel or Windows Settings. I like using the control panel so 
+		the steps that follow will reflect that.
+	</p>
+	<ol>
+		<li>Open up the control panel.</li>
+		<li>Click 'User Accounts'</li>
+		<li>Click 'Remove User Accounts'.</li>
+		<li>Delete, add, or change passwords, account types by clicking on a user account that you wish to change.</li>
+	</ol>
+	<p>This is where you should do all of your user changes. If you mix things up, you might not get everything and miss someone. Make sure before 
+		you finish with the users that you double check the README that you did not miss anything.</p>
+	<h4>Firewall</h4>
+	<p>The firewall is extremely important to activate as well, having the same theme as everything you should do on this page as its good points to 
+		get started. The firewall can only be managed through the control panel and the rules where you can make outbound and inbound rules is in an
+		advanced firewall application that does not turn on the firewall only deals with the rules of the firewall. You don't need to configure anything 
+		on the firewall settings other than turning it on, unless the README specifies otherwise.
+	</p>
+	<ol>
+		<li>Open up the control panel.</li>
+		<li>Click on 'System and Security'</li>
+		<li>Click on 'Windows Defender Firewall'</li>
+		<li>On the left click on 'Turn Windows Defender Firewall on or off'</li>
+		<li>In the menu turn on the firewall.</li>
+	</ol>
+	<p>That's all, and it's pretty simple and quick to do. Be aware that in the section when you turn on the firewall, you can block connections. You do 
+		not want to turn this on. I have had plenty of experiences where you are using a OpenSSH service and block any connections which effectively shuts 
+		down any methods of accessing that service. You lose points and again, unless specified in the README, don't block any connection. If you need to 
+		set up rules, go back to the main firewall settings and click 'Advanced settings'. Settings up the firewall on Windows is a lot easier than Ubuntu 
+		the GUI is a little more user friendly.
+	</p>
+	<h4>Groups</h4>
+	<p>Groups are incredibly important to make sure that you know how to configure them. On the image it will presumably asking you something about the groups 
+		found on this machine. You will need to go to a certain app to get that information. Fortunately it is sort out quite nicely but it can get confusing.
+		In the app you can modify, add and remove groups as well as changing their permissions to what they are allowed to do on the computer.
+	</p>
+	<p>***INSERT PROCESS HERE. you need pro edtion of windows.</p>
+	<h4>ETC.....</h4>
+</body>
+</html>
