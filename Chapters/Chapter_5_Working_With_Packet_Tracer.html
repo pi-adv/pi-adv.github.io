@@ -54,6 +54,67 @@
 		section to connect all of those devices that you put onto the environment. Typically you will need a end device, router or switch,
 		a ISP, then loads of connectors and connections to make sure everything is connected, that needs to be. 
 	</p>
-
+	<p>Using the physical interface works like the logical side but are typically used to set up locations and the overall setup of 
+		a server room would like or an office to bring it more life. When entering a competition or tutored lesson you with have the 
+		physical side to give you more information about how the scenario looks like. 
+	</p>
+	<h4>Creating a Simple Network</h4>
+	<p>For the first activity use the 2.1.1 lab to follow along. Our main objectives here is to connect a laptop, PC to the internet Using
+		the cable modem. When you open the lab in packet tracer, you will be presented with the objectives on the left, and the environment 
+		on the right. You already have a couple things set up. A wireless router, which you will use to connect the PC and Laptop first. And 
+		then you have the internet, which is a cloud. Then the server hosted on the internet. 
+	</p>
+	<ol>
+		<li>First lets setup the devices.</li>
+		<p>In the bottom left corner, go End Devices => PC, and drag or click on the PC icon. Drag or click to the screen to place the PC. Go back 
+		into the same place and click or drag the Laptop to the screen. </p>
+		<li>Second, lets change some names.</li>
+		<p>Changing the names can help when you have a lot of devices on the screen. To do this, go to (Click a device on the screen) => (In the pop-up window)
+			click on config => Change the display name. Every device has this method of changing their names. Do step 1 & 2 for the cable modem. It's
+			located in the Network Devices => WAN emulation => Cable Modem.</p>
+		<li>Third, connect the devices.</li>
+		<p>You need to make sure that all of your devices are connected properly. Some devices only use certain connections to hook up to certain
+			ports. Taking the PC, go to Connections => Copper Straight-Through Wire. (third is the list of connections). Then hover over the 
+			PC and click. You want to hook up to FastEthernet0. Move your mouse to the wireless router and click. Select the Ethernet 1 port.
+			You should see the wire obtain two different markers on it. These are to show you the connection between the two devices. Both 
+			sides will show the status of the connection on either side respectfully. </p>
+		<p>A different method is applied for the Laptop. Click on Laptop and open the 'Physical' section. Turn off the power with the power 
+			button located on the left of the image of the laptop. Click and drag the ethernet port (network card) to the menu on the left. With the 
+			black empty space, you want to click and drag the WPC300N part to the same place the network card came from. Turn on the power. Now that
+			we can connect wirelessly, navigate to the 'Desktop' section, and click on 'PC Wireless'. In this application open the 'Connect' section 
+			and click 'Refresh'. A new network called HomeNetwork should appear. Click on it and press 'Connect'. When you exit the laptop, you 
+			should now see that the laptop has black bars connecting it to the router. The laptop is connected via wireless.  </p>
+		<p>The router is connected to the cable modem using a copper straight through wire. Go to Connections => Copper Straight-Through Wire.
+			click on the router and use the 'Internet' port. Click on the modem and use 'Port 1'.</p>
+		<p>The final last device to connect is the cable modem. The modem requires another cable called the Coaxial cable. It's the same method to 
+			connect the device. Go to Connections => Coaxial Wire. Click on the modem and use 'Port 0' then click on the 
+			Internet Cloud and use 'Coaxial 7'.</p>
+		<p>If you want to make sure everything is working, you should only see green triangles on the wires.</p>
+		<li>Fourth is to configure the PC.</li>
+		<p>You can configure everything about the devices that you are putting in the environment, especially the IP addresses. Click the PC and 
+			open the 'Desktop' section. Open the 'IP Configuration' app. From here everything can be customized to a tee. Though for this example you
+			are going to go under the IP Configuration and change it from 'Static' to 'DHCP'. Essentially the different is that static stays the same 
+			and is used if you are manually setting all of the values. DHCP lets the router handle the IP addressing and you don't decide what IP 
+			address is assigned and it fills the rest of the fields. Close the app and load the 'Command Prompt'. In the command prompt you want to 
+			test to see if you are connected and can get a report back from the Cisco.srv server in the environment. All you need to do is type: 
+			<code>ping cisco.srv</code>. It should take a couple or more seconds for you to get a reply but you should recieve reports back from the 
+			Cisco.srv server.
+		</p>
+		<li>Lastly is to configure the Laptop.</li>
+		<p>The laptop is pretty easy to deal with. Since you have already connected it to the internet we need to check to see if it can connect to 
+			the server. Click on Laptop => go to 'Desktop' section => open the web browser app. Once opened type <code>cisco.srv</code> in the url bar.
+			If you are correctly loaded than you should be taken to a site hosted on the cisco.srv server!
+		</p>
+	</ol>
+	<p>Surprisingly that is really all there is to it. Connect devices and check the connectivity. There are more advanced things you can do, but 
+		if you are starting out this is good place to be. Next would be continuing the course and completing all three of the courses to set you up
+		for the competitions. More courses and resources will be found to help you understand and gain points for your team.
+	</p>
+	<hr>
+	<br>
+	<br>
+	<div id="footer">
+		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Updated July 19th, 2024</p>
+	</div>
 </body>
 </html>
