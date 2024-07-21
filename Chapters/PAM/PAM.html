@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<title>PAM (C.EDU)</title>
+<link rel="stylesheet" href="Chapters_style.css">
+<link rel="icon" type="image/x-icon" href="../favicon.ico">
+
+<body>
+    <h1 id="headerL">PAM</h1><h3 id="headerR"><a href="Chapter_3_Working_With_Ubuntu.html">Back to Ch.3</a></h3>
+	<br id="brlarge">
+    <p id="titlep">PAM is security settings that protects everything from accounts, authorization and passwords. These files are going
+        to be located in the /etc/pam.d directory that will have four crucial files that you are going to do changes. (for the most part).
+    </p>
+    <p>The four files are:</p>
+    <ol>
+        <li>common-auth</li>
+        <li>common-account</li>
+        <li>common-password</li>
+        <li>common-session</li>
+    </ol>
+    <p>For example purposes we are going to take a look at the common-password file. Also for credit I am following the video from 
+        <a href="https://youtu.be/eHGzzCtJg0A?si=WLmkoJaH5D6U5Gvk">Linux, Visually.</a> </p>
+    <p>PAM files are used for most backbone settings for passwords and account creation. These will run in the background or run with
+        a command that involve anything to do with passwords. In the directory you will find some files that are exactly like commands. 
+        Take the passwd file. passwd is a command and is used to change your password when you run it. Inside of the file is the following:
+    </p>
+    <code>
+        #
+        # The PAM configuration file for the Shadow 'passwd' service 
+        #
+
+        @include common-password
+    </code>
+    <p>The @include calls a certain file that proceeds after the @include is called. Since the common-password file is called, everything in 
+        common-password file will be insert and used in the passwd file and when you call the passwd command. Since this happens when you open 
+        up any other file that connects itself with a command or service, one or multiple PAM files could be included to use its contents. How 
+        PAMs files are configured so that they deploy a certain standard accross the whole system. 
+    </p>
+    <p>There are four different sections of a line in a PAM file. Taking the common-password file (here is a <a href="common-password.txt" donwload="common-password">copy</a> in txt form.)</p>
+    <ol>
+        <p>Of course this will be different for the common-auth/account/session. Some modules will apply differently.</p>
+        <li>First section/column ex: |password|</li>
+        <p>This first column will tell you what the following sections will apply to. password is for password types, account is for account types, etc.</p>
+        <li>Second section/column ex: |requisite|</li>
+        <p>This second column tells you the level of this line is interpreted. There are many different levels that start as being required to even run, 
+            or that can be skipped even if it fails. The hierarchy works a like regular and it's pretty simple to follow. 
+        </p>
+    </ol>
+
+</body>
+</html>
