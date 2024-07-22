@@ -39,7 +39,7 @@
 	<p>Giving some more information about Cisco Packet Tracer, I will be following the courses in the order above. Of course giving some 
 		other experiences with Cisco that could help your learning process.
 	</p>
-	<h4>Getting Started -- Packet Tracer</h4>
+	<h4>Course 1 - Getting Started</h4>
 	<p>This is a very simple introduction into Packet Tracer, fortunately you can also download cisco packet tracer through the skillsforall 
 		program that Cisco has in place. You will need Packet Tracer to do these certain things, there is no online interface. You will need 
 		a Windows or Linux computer to run it.
@@ -110,11 +110,134 @@
 		if you are starting out this is good place to be. Next would be continuing the course and completing all three of the courses to set you up
 		for the competitions. More courses and resources will be found to help you understand and gain points for your team.
 	</p>
+	<h4>Course 2 - Networking</h4>
+	<p>This entire course is setup so you have some more on hand experience with the tools and devices that are included in Packet Tracer. It also goes 
+		through the physical and logical modes a lot better than the first course. I found getting your hands dirty with the labs was better than watching 
+		the videos, but that was my experience. The labs are pretty well laid out. Since these ones have a progress counter it makes knowing what is left 
+		and knowing that you have done things much better understood. The only thing I found is that you might have to reload a couple of the labs to 
+		make sure that it actually picks up what you are doing inside the lab. Other than that it was a great course and took me 3-4 hours straight to \
+		complete. The take-away from this course is again, to go more in depth about using the tools and devices in Packet Tracer. You get to experience 
+		hooking up cables to network devices and configuring the cables to a certain port so that it will correspond to either a device or another component.
+	</p>
+	<p>These are the labs that where apart of the course:</p>
+	<ul>
+		<li><a href="Packet Tracer/Course 2/1.1.4packet-tracer-create-realistic-structured-cablinginthe-physical-workspaceand-cabling-devices-ina-rack(1).pka" download="create realistic structured cabling">Course 2 - Lab 1.1.4</a></li>
+		<li><a href="Packet Tracer/Course 2/1.1.6packet-tracer-connect-devicesusing-wireless-technologies(1).pka" donwload="connect devices using wireless technologies">Course 2 - Lab 1.1.6</a></li>
+		<li><a href="Packet Tracer/Course 2/1.1.8packettracerexploredeviceconfigurationusingthecli(console)(1).pka" download="exploring device configurations">Course 2 - Lab 1.1.8</a></li>
+		<li><a href="Packet Tracer/Course 2/2.0.3packettracerexaminepacketsinesmalloffice(1).pka" download="examining packets">Course 2 - Lab 2.0.3</a></li>
+		<li><a href="Packet Tracer/Course 2/2.0.7packetrtacer-edittoplogies(1).pka" download="editing toplogies">Course 2 - Lab 2.0.7</a></li>
+		<li><a href="Packet Tracer/Course 2/2.1.3packettracermonitoryournetworkusinganetworkcontroller(1).pka" download="monitoring a network controller">Course 2 - Lab 2.1.3</a></li>
+	</ul>
+	<p>Let's take the first lab and take a tour through it.</p>
+	<ol>
+		<li>Open up Lab 1.1.4 of Course 2.</li>
+		<p>Make sure that you have Packet Tracer installed. Hopefully you already have it installed.</p>
+		<ol>
+			<li>You will need to click on the equipment cabinet near the lower right. Clicking on this cabinet will show a whole environment that contains all of the server
+				hardware that connects the office to internet.
+			</li>
+			<p>To complete the first task is to click and drag the Structured Cabling device to setup the wall mount which is the main goal. Go to Connections =>
+				Structured Cabling => Copper Patch Panel. Put this anywhere on the rack to the left. That's all that you need to do to install the Panel.
+			</p>
+			<li>Next is to configure the Panel that you just installed.</li>
+			<p>You need to connect the wires through to the exact ports or it will fail.</p>
+			<table style="width:80%">
+				<tr>
+					<td style="text-align:center">Port on Office-SW1</td>
+					<td style="text-align:center">Port on Patch Panel0</td>
+				</tr>
+				<tr>
+					<td>G1/0/13</td>
+					<td>Jack13</td>
+				</tr>
+				<tr>
+					<td>G1/0/14</td>
+					<td>Jack14</td>
+				</tr>
+				<tr>
+					<td>G1/0/15</td>
+					<td>Jack15</td>
+				</tr>
+				<tr>
+					<td>G1/0/16</td>
+					<td>Jack16</td>
+				</tr>
+			</table>
+			<p>You want to use the green cables which are copper straight through cables. You can connect the cables in an order just make sure that each port is 
+				connected to the proper one. Right clicking the cable you can change the color to keep everything organized.
+			</p>
+			<li>Third is to setup the Wall Mount.</li>
+			<p>Go back to the overview of the office back pressing the back button near the top right of the screen. Or you can use Alt+Left to go back to the office.</p>
+			<p>In the office you want to install a Wall Mount and connect it to the panel so that it will actually connect the devices that you did connect to the Wall Mount
+				will become connected to the network. Go to Connections => Structured Cabling => Copper Wall Mount. Click and drag the device and place it anywhere on the wall.
+				Then you need to connect the Wall Mount to the Panel. Go to Connections => Copper Straight-Through cable. Click the Wall Mount and choose the Punchdown1 
+				connector, and select the Equipment Cabinet. This should pop-up a menu with a whole bunch of devices that you can connect to. Go to the Panel, and connect to 
+				the Punchdown13 connector. This will effectively connect the Punchdown1 port on the Wall Mount to the Panel. Now you need to connect the three other ports on 
+				the Wall Mount. Follow the table below:
+			</p>
+			<table style="width:80%">
+				<tr>
+					<td style="text-align: center">Port on Wall Mount</td>
+					<td style="text-align: center">Port on Panel</td>
+				</tr>
+				<tr>
+					<td>Punchdown1</td>
+					<td>Punchdown13</td>
+				</tr>
+				<tr>
+					<td>Punchdown2</td>
+					<td>Punchdown14</td>
+				</tr>
+				<tr>
+					<td>Punchdown3</td>
+					<td>Punchdown15</td>
+				</tr>
+				<tr>
+					<td>Punchdown4</td>
+					<td>Punchdown16</td>
+				</tr>
+			</table>
+			<p>Once connected you will now start to connect the devices to the ports on the Wall Mount.</p>
+			<p>!NOTE! I am going to skip the part of setting up the other Wall Mount since it's the same steps with different ports (if you are curious I'll provide a table).
+				Also you can organize the cables going to the cabinet by right clicking a cable and creating a bendpoint.
+			</p>
+			<p>TABLE FOR PORTS FOR OTHER WALL MOUNT</p>
+			<table style="width:80%">
+				<tr>
+					<td style="text-align: center">Port on Other Wall Mount</td>
+					<td style="text-align: center">Port on Panel</td>
+				</tr>
+				<tr>
+					<td>Punchdown1</td>
+					<td>Punchdown21</td>
+				</tr>
+				<tr>
+					<td>Punchdown2</td>
+					<td>Punchdown22</td>
+				</tr>
+				<tr>
+					<td>Punchdown3</td>
+					<td>Punchdown23</td>
+				</tr>
+				<tr>
+					<td>Punchdown4</td>
+					<td>Punchdown24</td>
+				</tr>
+			</table>
+			<li>Finally, connect the PC to the Wall Mount</li>
+			<p>What you need to do is go to Connections => Copper Straight-Through cable and connect the FastEthernet0 to Port 2 on the desired Wall Mount. Why I say Port 2 on
+				the Wall Mount is because I have had issues when you connect to Port 1. If the port doesn't work that you are trying to connect to, try another one. Once you 
+				get connected, try pinging one of the other devices on the network or opening a web browser in the Desktop section of the PC and going to 
+				<code>office.srv</code> to verify your internet connection.
+			</p>
+		</ol>
+	</ol>
+	<p>Once you complete the Lab you are set up to continue using the other labs. They take you through some more advanced items and building upon what you just did.</p>
 	<hr>
 	<br>
 	<br>
 	<div id="footer">
-		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Updated July 19th, 2024</p>
+		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Page updated July 21th, 2024</p>
 	</div>
 </body>
 </html>
