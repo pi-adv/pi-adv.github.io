@@ -65,3 +65,8 @@ img {
 	border-radius: 50%;
 	border: 5px solid #292922;
 }
+
+hr {
+	border: 5px solid green;
+	border-radius: 5px;
+}
