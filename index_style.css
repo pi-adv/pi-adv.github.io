@@ -57,3 +57,11 @@ h1 {
 
 }
 
+p {
+	text-align: center;
+}
+
+img {
+	border-radius: 50%;
+	border: 5px solid #292922;
+}
