@@ -247,12 +247,66 @@
 		<li><a href="Packet Tracer/Course 3/1.1.3-packet-tracer-add-iot-devices-in-pt(1).pka" download="Adding IoT Devices">Course 3 - Lab 1.1.3</a></li>
 		<li><a href="Packet Tracer/Course 3/1.2.3-packet-tracer-connect-to-a-home-gateway-and-monitor-network(1).pka" download="Connecting to a Home Gateway">Course 3 - Lab 1.2.3</a></li>
 		<li><a href="Packet Tracer/Course 3/1.2.6-packet-tracer-connect-and-control-devices-using-a-registration-server(1).pka" download="Connecting and Controlling Devices on a Remote Server">Course 3 - Lab 1.2.6</a></li>
+		<li><a href="Packet Tracer/Course 3/2.0.5-packet-tracer-modify-and-monitor-environmental-controls-in-packet-tracer(1).pka" download="Modify and Monitor Environmental Controls">Course 3 - Lab 2.0.5</a></li>
+		<li><a href="Packet Tracer/Course 3/2.1.3-packet-tracer-create-your-own-iot-thing(1).pka" download="Creating your own IoT">Course 3 - Lab 2.1.3</a></li>
+		<li><a href="Packet Tracer/Course 3/2.1.6-packet-tracer-modify-an-existing-script-for-an-iot-thing(1).pka" download="Modifying Scripts for IoT Thing">Course 3 - Lab 2.1.6</a></li>
 	</ul>
+	<p>Course 3 does also introduce quite interesting features like the programming section of IoT devices and the environment that could be a whole course in itself. If you 
+		ever wondering about any programming with Packet Tracer, there in fact is some. You should be capable of reading Javascript and Python for the best chance of 
+		understanding what you are going to jump into during competition. Mostly you are setting up real scenarios like your household which is the main reason why I like 
+		fooling around with Packet Tracer. 
+	</p>
+	<p>To introduce Course 3, I'm going to go over the 'Creating your own IoT Thing' lab since it's a good stepping stone.</p>
+	<ol>
+		<li>Open the Lab 2.1.3 in Packet Tracer</li>
+		<p>Make sure that you have Packet Tracer installed.</p>
+		<ol>
+			<p>Beforehand you should know the general idea of a 'Thing'. A 'Thing' is a blank template for you to build your own IoT device. You can customize everything 
+				about it to make it realistic like your IoT devices acts in the real world.
+			</p>
+			<li>Click and Drag the 'Thing' into the environment.</li>
+			<p>Go to Components => Boards => Thing. Drag this puzzle piece into the environment.</p>
+			<li>Click on the Thing to bring up the configuration.</li>
+			<p>In here you can do anything to make the Thing what you want. But first change the display name to Security Camera.</p>
+			<li>Go to the Thing Editor section of the configuration.</li>
+			<p>To find the Thing Editor, click on the advanced button on the very bottom right of the window. Once in the Editor, you will placed in the properties 
+				menu. Change the display name to Security Camera. Click the 'new' which is the place to insert images to show what the IoT device is. Download 
+				<a href="Packet Tracer/Security-Camera.png" download="Security-Camera">this</a> image and open the image when the pop-up comes up for inserting 
+				an image for the IoT device. You also need to change the Slot Mapping to digital and change the slot to 'Slot 1'.
+			</p>
+			<li>Next, is to setup the device to connect to the network.</li>
+			<p>On the configuration window for the Security Camera, click on the I/O Config section. Currently the network adapter is unselected. Change the network adapter 
+				to <b>PT-IOT-NM-1W-AC</b> which giving the device a few moments to update, should connect to the Home Gateway. 
+			</p>
+			<li>Conifgure the network settings.</li>
+			<p>Once the adapter is installed you now need to configure the settings. Go to the Config tab and click on Wireless0. Navigate to the IP configuration 
+				area of the settings. You should recieve an IP address through DHCP. If not toggle between Static and back to DHCP to refresh and receive an IP 
+				address. Note this IP address.
+			</p>
+			<li>Test out the connectivity of the Security Camera.</li>
+			<p>To test the connection of the Security Camera, you are going to ping it through the tablet. Go to the Tablet, and navigate to the Command Prompt.
+				Use the IP address of the Security Camera to ping it. <code>ping 192.168.25.XXX</code> If you not receive a reply, make sure that the IP address is correct 
+				and that the Security Camera has a proper IP address through DHCP.
+			</p>
+			<li>Saving the template to use through Packet Tracer.</li>
+			<p>You can save the Security Camera to use in other projects than just the one that you are using. To do this, go the Tools (At the very top of the screen) => 
+				Custom Device Dialog => Device Template Manager. Clicking the select button will have you select the device you wish to save. Click on the security camera after 
+				click the select button. The menu should autopopulate with the name. In all of the options of the bottom half of the Edit section is where you can place the Security 
+				Camera to go to and drag it into the environment. Typically for an IoT device, click on the Home box and click the Add button. Save the file in the default location.
+				Once saved you can now go to any projects on your computer and navigate on the device menu and click and drag it into the environment.
+			</p>
+		</ol>
+	</ol>
+	<p>That is overall idea of what you will be learning in Course 3 of the Packet Tracer Courses. There are plenty other resources to aid you in learning about Cisco Packet Tracer 
+		however these are recommended to do first since this comes from an official channel. I will collect more resources and update them here or you can search the web 
+		and find some on your own. You should also consider fooling around with Packet Tracer. Try to create your home in Packet Tracer. Any experience you can get with 
+		configuring devices is good to have.
+	</p>
 	<hr>
 	<br>
 	<br>
 	<div id="footer">
-		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Page updated July 23th, 2024</p>
+		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Page updated July 24th, 2024</p>
 	</div>
 </body>
 </html>
