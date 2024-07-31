@@ -5,7 +5,7 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <body>
-	<h1 id="headerL">Chapter 6 - Bash and Scipts</h1><h3 id="headerR"><a href="Chapters.html">Chapters</a></h3>
+	<h1 id="headerL">Chapter 5 - Bash and Scipts</h1><h3 id="headerR"><a href="Chapters.html">Chapters</a></h3>
 	<br id="brlarge">
 	<p id="titlep">This page is all about developing a good connect with bash, which is used to create scripts to automate processes.
 		The use cases are endless with scripts where you could automate users to even more complex scripts for figuring out hashes.
@@ -28,11 +28,154 @@
 	<p>There are also many other resources including some from paid and free resources. Codecademy has a couple of courses on bash scripting, but there are many free ones that 
 		you shouldn't need to pay for any sort of resource.
 	</p>
+	
+	<h2>Introduction to Bash Scripting</h2>
+	<p>Starting with bash is pretty simple to set up. You will need a computer running linux or an environment running linux. A text editor, which will 
+		typically be Notepad++ or Visual Studio Code, to create the script. The other portion is writing all of the code to perform what you would like 
+		on a linux system. Bash is used for anything on the linux system. I do know you can also run bash on Windows, but usually you are going to find
+		more .exe files than bash files. You can run any linux command in your script. Which essentially makes your script a preset for intructions that 
+		is condensed in one file. Treating it like a terminal can be helpful when writing the program since you are going to make a script that is in the 
+		confines of the terminal. You can build an application but for these purposes this will just be showing you how to make a script that runs in the 
+		terminal.
+	</p>
+	<h4>Lesson 1 - The Basics</h4>
+	<p>If you have done any research on learning a program language, you know that the first few things that they introduce is variables. I'll use the same 
+		format but I'll try an make it a little less redundent. Fortunately bash does not have a complicated system for variables.
+	</p>
+	
+	<h5>Variables</h5>
+	<p>You can define all sorts of variables in bash, anywhere from strings to numbers, you can store it in a variable. Variables are containers that you 
+		create and add values to it to use later. If you have used python, it will be the most similar to that language. What's great is that you don't 
+		need to define the type of variables if you want to create one. Though bash does have some stipulations when it comes to creating a variable and 
+		calling it.
+	</p>
+	<ul>
+		<li>Creating a Variable</li>
+		<p>Making a variable has a specific format.</p>
+		<ul>
+			<li>First is the set the name of the variable on a new line.</li>
+			<code>test_variable</code>
+			<p>*Be aware that you have to follow the rules as you would for python. No special character at the start, you can't have a command as a variable,
+				and you cannot end the variable with a space, or even have a space in the variable.
+			</p>
+			<li>Second, place an equal sign directly after, with no spaces in between.</li>
+			<code>test_variable=</code>
+			<li>Third is to put the value of the variable. Putting a number, or putting text in between brackets, or even a boolean value. But you can't have any space between 
+				the value and the equal sign.</li>
+			<code>test_variable=31</code>
+			<code>test_variable="July"</code>
+			<code>test_variable=TRUE</code>
+		</ul>
+		<li>Calling a Variable</li>
+		<p>Calling a variable is a little different than usual.</p>
+		<ul>
+			<li>First, create a variable.</li>
+			<p>*If you don't have the variable you are calling it will error out.</p>
+			<code>test_variable=31</code>
+			<li>Second, call the variable.</li>
+			<p>To call a variable you will need a $ symbol before the variable name.</p>
+			<code>$test_variable</code>
+		</ul>
+	</ul>
+	<h5>Setting up a File</h5>
+	<p>Usually you don't need to do too much when setting up a file but there are some things that should be mentioned. First thing is the shabang. The shabang 
+		is a line in the file telling it where everything that bash needs is. This will typically be in your /bin/bash directory. Setting up a shabang is 
+		as simple as putting <code>#!/bin/bash</code> on the first line of any bash program you write. Another thing that you should pay attention to is 
+		the file extension. This is more for linux, but shell scripts can be made without the .sh extension at the end of the file. You can simply create 
+		a file without an extention and edit it as if it was a shell script. On Windows it will detect that it is a shell script or repopulate the .sh 
+		extention to the file. Then again Windows would be better off using .ps1 which is powershell.
+	</p>
+	<h5>Functions</h5>
+	<p>I bring functions up because I had to search up how to do functions. Functions weren't as clear than I was thinking but they involve a good seamless process.
+		To build a function you will need the following:
+	<p>
+	<ul>
+		<li>A Name for the Function.</li>
+		<li>Brackets to setup arguments.</li>
+		<li>Curly brackets to place the contents of the function.</li>
+	</ul>
+	<p>So in practice here is an example:</p>
+	<code>startup (#args here) {
+		echo "Hello World"
+	}
+	</code>
+	<p>Calling functions are as simple as calling the name of the function. For example:</p>
+	<code>
+	if []
+	then 
+		startup
+	fi
+	</code>
+	
+	<h4>Lesson 2 - Commands</h4>
+	<p>There are multiple commands that you can do in bash, some are only for bash and others are used in the linux terminal which you can call in a program. 
+		You are typically going to be using commands such as echo, read, clear. And statements like if, while, and for.
+	</p>
+	<p>So let's go over a couple of statements and commands that are most common:</p>
+	<ul>
+		<li>echo</li>
+		<p>The echo command is always used when you want to print or show something on the screen. All you need to do is call the echo command and then put what 
+			you want to echo to the screen.
+		</p>
+		<code>echo "Hello World!"</code>
+		<li>read</li>
+		<p>The read command is used when you want to read user input. You need to call the command and if you want to store that value, declare or call the variable 
+		after the command.</p>
+		<code>read input_variable | or | read $input_variable</code>
+		<li>clear</li>
+		<p>The clear command is a personal preference for me, being that the clear command clears all lines on the terminal. It's used when you need a clean
+			board to work on.
+		</p>
+		<code>clear</code>
+		<li>if statement</li>
+		<p>The if statement works just as you would with everyother language but with a few steps. In the brackets [] of the if statement you will put 
+			the statement for the if portion. The statement has to have a space on either side. Also an if/elif statement has to have a <b>then</b> statement 
+			after the arguments in the brackets (not applicable for the else statement). To end the if statement you need to put a fi statement to complete it. Ex:
+		</p>
+		<code>if [ 1=1 ]
+		then
+			echo "Hello!"
+		elif [ 1=2 ]
+		then 
+			echo "World!"
+		else
+			echo "!"
+		fi
+		</code>
+		<li>while statement</li>
+		<p>The while statement works by taking a set of parameters and continuing the intructions until the conditions are met. You use the 
+			<b>do</b> statement and the <b>done</b> statement when you are finished the while statement. Same with the if statements, you have to 
+			put the conditionals in brackets [] with spaces on either side. Ex:
+		</p>
+		<code>
+		while [ 1=1 ]
+		do	
+			echo "HELLO"
+		done
+		</code>
+	</ul>
+	
+	<h4>Lesson 3 - Setting up a file to run</h4>
+	<p>There are certain things that you will need to do to run your bash script in the terminal, first off is to load the terminal and change the directory 
+		to the directory that your script is located. Once done, run the change mod command and the +x condition, and the name of the file you are changing 
+		to execute. It should like like this: <code>sudo chmod +x your_file.sh</code>. If you run the list directory command, you should see that the 
+		file has changed colors. Now all you need to do is to run the file by doing: <code>./your_file.sh</code>.
+	</p>
+	<p>Files can be a little different, you can create a file with the .sh extension or not and using the command above it will still run. Bash scripts 
+		aren't typically the largest so don't be worried if your 200 line program is only a couple 100 kilobytes.
+	</p>
+	<h4>Lesson 4 - Other</h4>
+	<p>To learn bash you are going to need a bit of knowledge and quite a bit of messing around. Looking online for different commands are going to be key 
+		to build a proper script that you would like to build. A couple other command that you might want to consider is the sleep command. The command 
+		stops and sleeps the program for how many seconds that you put as a number after the command. <code>sleep 3</code> This example only sleeps the 
+		program for 3 seconds. Looking online for courses or resources can be great too, since a combined information should be provided and make 
+		sure to take note of anything important, you might need it for another program.
+	</p>
 	<hr>
 	<br>
 	<br>
 	<div id="footer">
-		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Page updated July 25th, 2024</p>
+		<p>This website is created by pi-adv, provided by <a href="https://github.com/pi-adv/pi-adv.github.io" target="_blank">Github.</a> Page updated July 31st, 2024</p>
 	</div>
 
 </body>
