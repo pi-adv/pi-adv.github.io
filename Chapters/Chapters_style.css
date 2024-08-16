@@ -67,3 +67,7 @@ li {
 table, th, td {
 	border:2px solid #292922;
   }
+
+a {
+	text-decoration: none;
+}

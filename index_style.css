@@ -70,3 +70,7 @@ hr {
 	border: 5px solid #cc6600;
 	border-radius: 5px;
 }
+
+a {
+	text-decoration: none;
+}

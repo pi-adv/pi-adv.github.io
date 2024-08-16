@@ -8,7 +8,7 @@
 
 @font-face {
 	font-family: "Quicksand";
-	src: url(Quicksand.ttf) format("truetype");
+	src: url(../Quicksand.ttf) format("truetype");
 }
 
 
@@ -74,4 +74,8 @@ hr {
 br {
     display: block;
     margin: 10px 0;
+}
+
+a {
+	text-decoration: none;
 }

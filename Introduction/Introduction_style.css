@@ -54,3 +54,7 @@ h1 {
 	color: var(--font-color);
 	text-align: center;
 }
+
+a {
+	text-decoration: none;
+}
