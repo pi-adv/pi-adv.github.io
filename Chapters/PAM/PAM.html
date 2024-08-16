@@ -5,9 +5,17 @@
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
 <body>
-    <h1 id="headerL">PAM</h1><h3 id="headerR"><a href="Chapter_3_Working_With_Ubuntu.html">Back to Ch.3</a></h3>
+    <h1 id="headerL"><a href="../../index.html">Cybertitan EDU</a></h1>
+	<h4 id="headerR">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Tools/Tools.html">TOOLS</a></h4>
+	<h4 id="headerR">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Chapters/Chapters.html">CHAPTERS</a></h4>
+	<h4 id="headerR">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Quizzes/Quizzes.html">QUIZZES</a></h4>
+	<h4 id="headerR">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Hypernova/Hypernova.html">HYPERNOVA</a></h4>
+	<h4 id="headerR">&nbsp;&nbsp;&nbsp;&nbsp;<a href="../../Introduction/Introduction.html">INTRO</a></h4>
 	<br id="brlarge">
-    <p id="titlep">PAM is a tool that manages a lot of security modules that determines if a user is who they are.</p>
+	<p id="titlep"></p>
+    
+    <h1>PAM</h1>
+    <p>PAM is a tool that manages a lot of security modules that determines if a user is who they are.</p>
 
     <p>Generally PAM is what is figuring out who is who on your computer. When anyone logs in or changes their password 
         PAM handles everything so it's a smooth easy process.
@@ -21,6 +29,74 @@
         <li>common-password</li>
         <li>common-session</li>
     </ul>
+
+    <p>In brief terms these are the management team of your system. These files have certain functions that apply to critical areas of your computer.
+        Fortunately they are all located in the pam.d directory which makes it easy to modify them. PAM as a whole is about authenticating the user, making sure that 
+        you are who you say you are. 
+    </p>
+    <p>PAM works by using libraries to offer module configurable support for anything on the system. This means that you can set your management team to be as 
+        strict as you want on your system. 
+    </p>
+
+    <h4>common-password file</h4>
+    <p>Opening up the common-password file you will find all the intructions that are initiated when you are doing anything revolving a password. Looking at the file,
+        there is quite a few comments, which describe what is going on in the file. If you are planning on writing to the file, make sure to include your own comments
+        to keep track what you implemented. You have multiple modules written in the file on each line and are activated one by one or sequential order.
+    </p>
+    <p>There are four field in one line in a PAM file.</p>
+    <ul>
+        <li>First Field (ex: password)</li>
+        <p>This field tells you what the line is modifying or associated with. In this file everything will have the password in the first field.</p>
+        <li>Second Field (ex: requisite)</li>
+        <p>This field tells you the behavior of the line. This field has many different items which will be in more detail below.</p>
+        <li>Third Field (ex: pam_pwquality)</li>
+        <p>This field is the action that the line will take. These are presumably scripts that will run for one reason or another. More of them are listed below.</p>
+        <li>Fourth Field (ex: retry=3)</li>
+        <p>This field will contain all of the arguements that is needed for the line and field three. There are many different arguements that you can use that may 
+            apply to your script.</p>
+    </ul>
+
+    <p>EXAMPLE of the first line of the common-password file.</p>
+    <p>password     requisite      pam_pwquality.so        retry=3</p>
+    <p>A side note; the pwquality.so module deals with setting a proper password. Third line deals with the actions of the line.</p>
+
+    <h4>Sample PAM stack (order of operations)</h4>
+    <p>required    NO      YES     YES     YES</p>
+    <p>required    YES     YES     YES     YES</p>
+    <p>requisite   YES     NO      YES     YES</p>
+    <p>optional    YES             NO      NO</p>
+    <p>sufficient  YES             YES     NO</p>
+    <p>requisite   YES                     YES</p>
+    <p>RESULT:     FAIL    FAIL    GOOD    GOOD</p>
+
+    <p>Field Two has four examples here that have some more detail regarding the stack.</p>
+    <ul>
+        <li>REQUIRED</li>
+        <p>If fails, goes through the stack but FAILS at the end.</p>
+        <li>REQUISITE</li>
+        <p>If fails, stops the stack and FAILS.</p>
+        <li>OPTIONAL</li>
+        <p>If fails, doesn't impact the success or failure rate of the stack.</p>
+        <li>SUFFICIENT</li>
+        <p>Checks if anything else has failed, if so, it fails but doesn't impact the stack.</p>
+    </p>
+
+    <h4>Programs</h4>
+    <p>Certain programs with any sort of account based or password authentication feature will appear in the pam.d directory when installed.
+        Opening these up will show you how that certain application authenticates users. Typically it will use the include function to bring the 
+        contents of the common- files to that file. SSH for example, once installed includes many common- files but also has its own code special
+        to the security of the application.
+    </p>
+    <p>If you ever looked in the pam.d directory you should have found the passwd file, which is a command that can be run to change the password of your 
+        account or another one's (with root privileges). Opening that file, it's quite small and include the common-password file. If you ever build an 
+        application of a command script to be used in linux, make sure to include the PAM files, they are extremely useful and as easy as using the 
+        include function to bring security to what you are building.
+    </p>
+    <p>A final word would be to make sure that you are careful when it comes down to changing a common- file. Since mostly everything relies on it, one 
+        small change could lock you out of the computer. So, before using the information and tossing it into competition make sure that your methods work 
+        before any changes are made.
+    </p>
+
 
     <a href="https://man.cx/pam_pwquality">pam_pwquality</a>
     <a href="https://man.cx/pam_pwhistory">pam_pwhistory</a>
