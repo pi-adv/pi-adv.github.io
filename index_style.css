@@ -74,3 +74,14 @@ hr {
 a {
 	text-decoration: none;
 }
+
+* {
+	box-sizing: border-box;
+}
+  
+  /* Add a card effect for articles */
+.card {
+	 background-color: #e9e8bc;
+	 padding: 20px;
+	 margin-top: 20px;
+}
