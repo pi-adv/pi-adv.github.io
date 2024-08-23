@@ -21,8 +21,9 @@
 			<li><a href="#I/R">SECTION 3.4 - Installing/Removing Apps</a></li>
 			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
 			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
-			<li><a href="#MU">SECTION 3.3 - More Ubuntu</a></li>
-			<li><a href="ECU">SECTION 3.* - Compeition</a></li>
+			<li><a href="#CS">SECTION 3.7 - Critical Services</a></li>
+			<li><a href="#MU">SECTION 3.8 - More Ubuntu</a></li>
+			<li><a href="#ECU">SECTION 3.* - Competition</a></li>
 		</ul>
 		<hr>
 	<h3>Sample Gameplans for Ubuntu:</h3>
@@ -180,6 +181,52 @@
 		the same thing as the Local Security Policy on Windows. To edit PAM you need to go a specifc directory where PAM is located
 		and use a text editor such as gedit or nano and edit the file to configure it.</p>
 	<p>Since PAM is much more than just a simple paragraph here I'm going to create a seperate page here <a href="PAM/PAM.html">PAM.</a></p>
+	<h4 id="CS">Critical Services</h4>
+	<p>There are multiple critical services that are on Ubuntu, including ssh, ftp (vsftpd), ufw and apache2. These do a wide range of things and control different parts 
+		of software on your system. The main ones that you are going to be tinkering with is ufw and ssh. The main reason is because ssh is usually on every single image, and 
+		ufw is for allowing communication from and to the computer. However I'll break down each to give a basic overview of what each service does and a basic configuration of 
+		said service.
+	</p>
+	<ol>
+		<li>ssh</li>
+		<p>ssh has many different uses and functions that you will configure. The openssh service is a service where you can connect to other ssh servers. But also allow other to 
+			connect to your system via ssh. It's quite easy and fast to do and setup however the complexity comes with configuring proper security settings. The files to configure 
+			will be <code>/etc/ssh/ssh_config *and* /etc/ssh/sshd_config</code>. To configure you want to set a couple of things, first you want to make sure no one is going to be 
+			able to log into root and take over the system, you can modify what port the ssh service operates on, accept only ssh generated keys rather than passwords. There is a 
+			bunch you can do. 
+		</p>
+		<ul>
+			<li>Root Login: Go to /etc/ssh/sshd_config and find the <code>PermitRootLogin</code> and set it to <code>no</code></li>
+			<li>Changing Port Number: Go to /etc/ssh/sshd_config and find the <code>port</code> line inside the file, change the number to what you need to set it to.</li>
+			<li>SSHKey Authentication: Go to /etc/ssh/sshd_config and find the <code>PasswordAuthentication</code> line in the file, around here you should find the sshpubkey line. Change the correct lines to what you need.</li>
+		</ul>
+		<li>ufw</li>
+		<p>ufw has already been covered here, but there is a certain function that wasn't. For some services you need to allow ufw to let the services through the firewall or allow 
+			certain rules they need to implement.
+		</p>
+		<ul>
+			<li>To do this: Open a terminal and type <code>sudo ufw allow ____service name____</code></li>
+		</ul>
+		<li>apache2</li>
+		<p>apache2 is a web service where you can host websites through your computer. This is fantastic and the origins of this very site, but you need to make sure no one can get 
+			access through the web server to your computer. The main two things I've found is the following:
+		</p>
+		<ul>
+			<li>Go to /etc/apache2/conf-enabled/security.conf and modify the <code>ServerTokens line</code>, changing it to Prod instead of Full or the default value.</li>
+			<li>Go to /etc/apache2/conf-enabled/security.conf and modify the <code>ServerSignature line</code>, changing it to Off instead of On.</li>
+		</ul>
+		<li>ftp (vsftpd)</li>
+		<p>The ftp service is the one that I have had the least amount of experience with. ftp is a file sharing service that you connect to via another computer. Usually you want to 
+			get rid of these services, but in certain cases you will actually need them. From my experience you want to make sure that things aren't anonymous. The reason being that you 
+			need to know who is connecting to your ftp service. It helps with logging, and if something were to go wrong, you can try and backtrack.
+		</p>
+		<ul>
+			<li>Go to /etc/vsftpd.conf and modify the <code>anonymous_enable line</code> and set it to NO. (This process is apart of disabling anonymous acitivty)</li>
+			<li>Go to /etc/vsftpd.conf and modify these lines <code>ssl_enable & ssl_tlsv1 & ssl_sslv2 & ssl_sslv3</code> and set them to YES.</li>
+			<p>The change above activates a crucial security feature which is TLS (Transport Layer Security). It's essentially basic security for everything to do with communication. <a href="https://www.cloudflare.com/learning/ssl/transport-layer-security-tls/">Learn More Here.</a></p>
+			<li>Go to /etc/vsftpd.conf and modify the <code>ssl_enable line</code> and set it to YES.</li>
+		</ul>
+	</ol>
 
 	<h4 id="ECU">Entering a Compeition with Ubuntu</h4>
 	<p>Going into a competition with ubuntu can be a daunting task. As the Rounds go by the harder the challenges will be. What you need to do is follow a plan.
