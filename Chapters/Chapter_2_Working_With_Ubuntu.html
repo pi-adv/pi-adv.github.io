@@ -22,6 +22,7 @@
 			<li><a href="#FS">SECTION 3.5 - Firewall Setup</a></li>
 			<li><a href="#SP">SECTION 3.6 - Security Policy</a></li>
 			<li><a href="#CS">SECTION 3.7 - Critical Services</a></li>
+			<li><a href="#ISF">SECTION 3.8 - Important System Files</a></li>
 			<li><a href="#MU">SECTION 3.8 - More Ubuntu</a></li>
 			<li><a href="#ECU">SECTION 3.* - Competition</a></li>
 		</ul>
@@ -159,6 +160,20 @@
 			by other applications, the terminal will ask you to run <code>sudo apt autoremove</code> to get rid of the
 			other packages.</li>
 	</ul>
+	<p>What I have found too, is that you cannot remove some packages only using the remove command with apt. What I have seen being used is purge. It's much
+		more effective and seems to find certain apps that seem to be hidden. All you need to do is use <code>sudo apt purge __app name__</code>.
+	</p>
+	<p>What we should take into account is the huge sum of apps that can be used to exploit the system. There will be apps we know of but more apps are to 
+		be developed. Though, there are some we know of and we can take action to remove them. Here is the ones I know of:
+	</p>
+	<ul>
+		<li>wireshark</li>
+		<li>nmap</li>
+		<li>ophcrack</li>
+		<li>hydra</li>
+		<li>john</li>
+		<li>snort</li>
+	</ul>
 	<h4 id="FS">Firewall Setup</h4>
 	<p>Surprisingly, the firewall is quite easy to setup on Ubuntu. The main portion is just installing the package.
 		By using the gufw application it makes it extremely easy to configure the status of the firewall, changing the
@@ -227,6 +242,31 @@
 			<li>Go to /etc/vsftpd.conf and modify the <code>ssl_enable line</code> and set it to YES.</li>
 		</ul>
 	</ol>
+	<h4 id="ISF">Important System Files</h4>
+	<p>There are certain files that aren't involved with a service but are system files that are crucially important. I didn't know about some of these, and after learning about them, there is 
+		a lot that can be set inside these files. Certain things that could affect serious security properties of the computer. These files include, /etc/sysctl.conf and /etc/login.defs.
+		The sysctl.conf file deals with parameters associated with the kernel parameters on bootup and can be changed with sysctl instead of recompiling the kernel. The login.defs 
+		provides default configuration information info about account parameters. This includes the useradd, usermod, etc... commands. These files have certain settings that I really didn't 
+		know exsists until I went over an answer key but you should know and adapt these into a plan for compeition. 
+	</p>
+	<ul>
+		<li>/etc/login.defs</li>
+		<p>Sysctl.conf is a file dealing with account parameters and only a few lines apply (at least what I know). Two lines deal with passwords, they are the PASS_MAX_DAYS and the PASS_MIN_DAYS.
+			These will look familiar if you have worked on windows since they essentially have the same setting in the Local Security Policy. You can set these the same numbers in the windows but I 
+			haven't found any mention of changing the PASS_WARN_DAYS, so change at your own risk. 
+		</p>
+		<p>The other few parameters that I found to change is the ENCRYPT_METHOD which I believe is the encryption method used by the system. Usually I found this file to be set to SHA512. 
+			The last line I found to change is the LOGIN_RETRIES which you can set how you would in windows.
+		</p>
+		<li>/etc/sysctl.conf</li>
+		<p>There are a lot more parameters to deal with in the sysctl file. Most of these deal with ipv4 settings. I found this odd, but this whole file has quite a few settings that have an impact.
+			Since there is so many of them I'll only mention a few but check the v1_Linux_Gameplan to see all of them. The rp_filter and accept_redirects are supposed to control two things respectively.
+			1. Is to verify the source address, and 2. To ignore ICMP redirects. Verifying the source address is a great feature since you can actively make sure that you aren't receiving impersenation
+			from the device you are getting or sending data to. It's a commmon tactic for hackers to spoof a device to be another one to send malicious things to devices. Ignoring ICMP redirects are also 
+			important because there is even a comment above this setting being 'we are not a router'. It's as simple as that, ICMP redirects are something to do with routers so since we aren't a router
+			we should make sure it's turned on to ignore them. 
+		</p>
+	</ul>
 
 	<h4 id="ECU">Entering a Compeition with Ubuntu</h4>
 	<p>Going into a competition with ubuntu can be a daunting task. As the Rounds go by the harder the challenges will be. What you need to do is follow a plan.
@@ -249,8 +289,13 @@
 	<h4 id="MU">More Ubuntu</h4>
 	<p>Competiting with Ubuntu only gets easier if you know exactly how to use the interface. If you want to know more about Ubuntu,
 		use Ubuntu. If you install Ubuntu on a laptop or a device of yours, it will help you get used to the interface and skip most 
-		of the simple commands and skip to the more advanced part of Ubuntu.
+		of the simple commands and skip to the more advanced part of Ubuntu. Here are some sites that you can use to learn more about the operating system.
 	</p>
+	<ul>
+		<li><a href="https://ubuntu.com/">Ubuntu.com</a></li>
+		<li><a href="https://ubuntu.com/community">Ubuntu Community</a></li>
+		<li><a href="https://askubuntu.com/">Ask Ubuntu</a></li>
+	</ul>
 	<hr>
 	<br>
 	<br>
