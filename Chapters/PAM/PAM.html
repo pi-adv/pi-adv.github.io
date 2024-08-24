@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>PAM (C.EDU)</title>
+<title>PAM</title>
 <link rel="stylesheet" href="../Chapters_style.css">
 <link rel="icon" type="image/x-icon" href="../favicon.ico">
 
@@ -60,14 +60,60 @@
     <p>password     requisite      pam_pwquality.so        retry=3</p>
     <p>A side note; the pwquality.so module deals with setting a proper password. Third line deals with the actions of the line.</p>
 
-    <h4>Sample PAM stack (order of operations)</h4>
-    <p>required    NO      YES     YES     YES</p>
-    <p>required    YES     YES     YES     YES</p>
-    <p>requisite   YES     NO      YES     YES</p>
-    <p>optional    YES             NO      NO</p>
-    <p>sufficient  YES             YES     NO</p>
-    <p>requisite   YES                     YES</p>
-    <p>RESULT:     FAIL    FAIL    GOOD    GOOD</p>
+    <table style="width: 80%;">
+        <tr>
+            <td style="text-align: center;">Sample PAM stack (order of operations)</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>NO</td>
+            <td>YES</td>
+            <td>YES</td>
+            <td>YES</td>
+        </tr>
+        <tr>
+            <td>required</td>
+            <td>YES</td>
+            <td>YES</td>
+            <td>YES</td>
+            <td>YES</td>
+        </tr>
+        <tr>
+            <td>requisite</td>
+            <td>YES</td>
+            <td>NO</td>
+            <td>YES</td>
+            <td>YES</td>
+        </tr>
+        <tr>
+            <td>optional</td>
+            <td>YES</td>
+            <td>_</td>
+            <td>NO</td>
+            <td>NO</td>
+        </tr>
+        <tr>
+            <td>sufficient</td>
+            <td>YES</td>
+            <td>_</td>
+            <td>YES</td>
+            <td>NO</td>
+        </tr>
+        <tr>
+            <td>requisite</td>
+            <td>YES</td>
+            <td>_</td>
+            <td>_</td>
+            <td>YES</td>
+        </tr>
+        <tr>
+            <td>RESULT:</td>
+            <td>FAIL</td>
+            <td>FAIL</td>
+            <td>GOOD</td>
+            <td>GOOD</td>
+        </tr>
+    </table>
 
     <p>Field Two has four examples here that have some more detail regarding the stack.</p>
     <ul>
