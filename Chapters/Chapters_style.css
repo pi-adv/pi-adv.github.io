@@ -71,3 +71,52 @@ table, th, td {
 a {
 	text-decoration: none;
 }
+
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #cc6600;
+    color: white;
+  }
+
+  .button {
+    top:75%;
+    background-color:#333;
+    color: #fff;
+    border:none; 
+    border-radius:30px; 
+    min-height:30px; 
+    min-width: 150px;
+	font-size: 20px;
+	height: 50px;
+	width: 400px;
+  }
+
+  .button:focus {
+    outline-color: transparent;
+    outline-style:solid;
+    box-shadow: 0 0 0 4px #cc6600;
+    transition: 0.7s;
+}
+
+.button:hover {
+	background-color:#cc6600;
+	transition: 0.7s;
+}
