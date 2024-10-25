@@ -88,7 +88,7 @@ a {
 }
 
 .topnav {
-    overflow: hidden;
+    overflow: scroll;
     background-color: #333;
   }
   
